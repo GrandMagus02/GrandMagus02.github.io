@@ -1,0 +1,15 @@
+mixin server(img, title, version, ip, status_name, status, players, server_num)
+    .server_box(class=status)
+        .left_part
+            img(src=img, alt="")
+            .info
+                h2=title
+                .ip
+                    a=version
+                    p IP: 
+                        a=ip
+        .right_part 
+            .status 
+                p=status_name
+                .circle_bar(id=server_num)
+                    span=players

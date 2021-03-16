@@ -1,0 +1,76 @@
+.server_box
+    box-shadow: 0 0 20px rgba($black, .25)
+    box-sizing: border-box
+    background-color: $white
+    display: flex
+    justify-content: space-between
+    margin-bottom: $margin_between_boxes
+    &::last-child
+        margin-bottom: 0
+    .left_part
+        display: flex
+        img
+            width: 10rem
+            height: 10rem
+        .info
+            margin-left: 2rem
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            h2
+                font-weight: bold
+                font-size: 2.4rem
+                margin: 0
+        .ip
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            a, p
+                font-weight: bold
+                font-size: 1.8rem
+                margin: 0
+                margin-right: 2rem
+            a
+                color: $blue
+    .right_part
+        display: flex
+        align-items: center
+        
+.status
+    display: flex
+    align-items: center
+    p
+        margin-left: auto 
+        text-align: right
+        font-weight: bold
+        margin-right: 3rem
+        text-transform: uppercase
+        font-size: 1.8rem
+
+.online
+    background: linear-gradient(0.25turn, $white, rgba($green, .25))
+    .status
+        p
+            color: $green
+
+.offline
+    background: linear-gradient(0.25turn, $white, rgba($orange, .25))
+    .status
+        p
+            color: $orange
+
+.only_registered
+    background: linear-gradient(0.25turn, $white, rgba($blue, .25))
+    .status
+        p
+            color: $blue
+
+.circle_bar
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    span
+        font-size: 1.4rem
+        font-weight: 600
+        position: absolute
