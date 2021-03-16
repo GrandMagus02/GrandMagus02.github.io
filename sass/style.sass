@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import modules/var.sass
+@import modules/breakpoints.sass
+body
+  height: 100vh
+  width: 100vw
+  padding: 0
+  margin: 0
+  background-color: $bg
+  font-size: 1.4rem
+  color: $darken_gray
+
+html
+  font-family: 'Montserrat', sans-serif
+  padding: 0
+  margin: 0
+  font-size: 62.5%
+
+.fixed
+  position: fixed
+  top: 0
+  left: 0
+
+.custom-scrollbar-thumb
+  background-color: $lighten_gray !important
+  border-radius: 0 !important
+  transition: background-color .5s
+  &:hover
+    background-color: $blue !important
+
+.custom-scrollbar-track
+  background-color: $dark_gray !important
+
+//     font-family: 'Ubuntu Condensed', sans-serif
+//     overflow-x: hidden
+//     //scroll-behavior: smooth
+//     font-size: 62.5%
+//     @include breakpoint($d-laptop)
+//       font-size: 52%
+//     @include breakpoint($d-phone)
+//       font-size: 41.6%
+
+// ::-webkit-scrollbar
+//   width: 8px
+// ::-webkit-scrollbar-track 
+//   background-color: $darken_gray
+//   box-shadow: inset 0 0 10px rgba($black, 1)
+//   border-radius: 0px
+// ::-webkit-scrollbar-thumb 
+//   background-color: $lighten_gray
+//   transition: background-color 5s
+//   &:hover
+//     background-color: $blue
+
+// h1, h2, p, li, a, img, .desc
+//   color: $light_gray
+//   text-shadow: 0 3px 7px rgba($black, .2)
+//   transition: color .5s
+//   box-sizing: border-box
+//   &::selection
+//     color: $darken_gray
+//     background-color: $orange
+
+// // a, img, .desc
+// //   &::selection
+// //     color: $darken_gray
+// //     background-color: $blue
+
+// p, li, a
+//   font-size: 2.4rem
+
+// p, li
+//   letter-spacing: .1rem
+//   line-height: 150%
+  
+// body
+//   background-color: $darken_gray
+//   margin: 0
+//   width: 100vw
+//   overflow-x: hidden
+//   overflow-y: hidden
+//   //transition: transform .1s
+
+// div
+//   transition: background-color .5s
+  
+// h1
+//   font-size: 4rem
+//   font-family: $russo, sans-serif
+//   text-transform: uppercase
+//   letter-spacing: .5rem
+//   line-height: 150%
+//   @include breakpoint($d-phone)
+//     font-size: 4rem
+// h2
+//   font-size: 2.4rem
+//   font-family: $russo, sans-serif
+//   text-transform: uppercase
+//   letter-spacing: 0.2rem
+//   line-height: 150%
+//   @include breakpoint($d-phone)
+//     font-size: 2rem
+// p
+//   text-indent: 2rem
+//   font-family: $ubuntu, sans-serif
+// ul
+//   list-style-type: square
+//   margin: 0 4rem
+// li
+//   font-family: $ubuntu, sans-serif
+// a
+//   color: $orange
+//   text-decoration: none
+//   text-shadow: 0 3px 7px rgba($black, .2)
+//   &:focus
+//     border: none
+// img
+//   transform: scale(1.2) translate(0%, 5%)
+//   //transition: transform .1s
+//   object-fit: cover
+//   cursor: pointer
+// hr
+//   width: 100%
+//   box-sizing: border-box
+//   padding: 3rem 0
+//   background-color: $darken_gray
+//   margin: 0
+//   border: none
+
+
+@import modules/header.sass
+@import modules/menu.sass
+@import modules/body.sass

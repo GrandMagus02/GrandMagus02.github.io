@@ -1,0 +1,12 @@
+include objects/menu.pug
+
+header
+    #logotype
+        p#serious.parallax_close Serious
+        p#company.parallax_normal Company
+    #header_slider_box
+        ul#header_slider 
+            each item in header_slider.img
+                li.img_box
+                    img.parallax_far(src=item.slide, alt="")
++menu()

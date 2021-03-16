@@ -1,0 +1,54 @@
+#page
+    max-width: $page_width
+    margin: 0 auto 0 auto
+    box-sizing: border-box
+    padding: 0 5vw
+    background-color: $white
+    box-shadow: 0 0 100px rgba($black, .25)
+
+    h1
+        font-size: 3.6rem
+        background: linear-gradient(0.25turn, rgba($blue, .25), $white)
+        padding: .5rem 2rem
+        margin: $margin_between_boxes 0
+        &:nth-child(odd)
+            text-align: right
+            background: linear-gradient(0.25turn, $white, rgba($blue, .25))
+
+.server_box
+    box-shadow: 0 0 20px rgba($black, .25)
+    box-sizing: border-box
+    background-color: $white
+    display: flex
+    margin-bottom: $margin_between_boxes
+    &::last-child
+        margin-bottom: 0
+    img
+        width: 10rem
+        height: 10rem
+    .info
+        margin-left: 2rem
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        h2
+            font-weight: bold
+            font-size: 2.4rem
+            margin: 0
+    .ip
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        a, p
+            font-weight: bold
+            font-size: 1.8rem
+            margin: 0
+            margin-right: 2rem
+        a
+            color: $blue
+
+.online
+    background: linear-gradient(0.25turn, $white, rgba($green, .25))
+
+.offline
+    background: linear-gradient(0.25turn, $white, rgba($orange, .25))

@@ -1,0 +1,62 @@
+header
+    height: calc(600px + 20vh)
+    width: 100%
+    background-color: $dark_gray
+    //background-image: url(../images/header_slider/main_bg1.jpg)
+    background-size: cover
+    display: flex
+    justify-content: center
+    align-items: center
+
+#logotype
+    margin-top: 5%
+    width: $page_width - 100px
+    z-index: 1
+    p
+        margin: 0
+        font-size: 14.4rem
+        line-height: 12.8rem
+        font-weight: bold
+        color: white
+        display: block
+        text-shadow: 0 0 100px rgba($black, 1)
+
+#serious
+#company
+    text-align: right
+
+#header_slider_box
+    position: absolute
+    overflow: hidden
+    width: inherit
+    height: inherit
+
+#header_slider
+    display: flex
+    position: relative
+    list-style-type: none
+    justify-content: center
+    width: inherit
+    height: inherit
+    margin: 0
+    padding: 0
+    overflow: hidden
+    z-index: $z-page
+
+.img_box
+    position: absolute
+    box-sizing: border-box
+    width: auto
+    height: auto
+    opacity: 0
+    -webkit-transition: opacity 5s
+    -moz-transition: opacity 5s
+    -o-transition: opacity 5s
+    transition: opacity 5s
+    img
+        pointer-events: none
+        width: inherit
+        height: inherit
+    
+.showing
+    opacity: 1

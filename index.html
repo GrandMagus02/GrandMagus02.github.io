@@ -4,453 +4,102 @@
     <link rel="shortcut icon" href="images/u_favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="libs/jquery.js"></script>
-    <link rel="stylesheet" href="libs/slick/slick.css">
-    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <script src="libs/smooth-scrollbar.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>UltimaCraft</title>
   </head>
-  <body>
-    <div id="headerSlider">
-      <div id="headerSlideBlock">
-        <!--#logoImgBlock-->
-        <ul class="sliderBox">
-          <li id="logoCoverBlock">
-            <!--#logoCoverBlock--><a id="logoCover" href="index.html">
-                  <svg id="logoSvg" data-name="uc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 448">
-                    <title>ultimacraft</title>
-                    <filter id="dropshadow" height="130%">
-                      <feGaussianBlur in="SourceAlpha" stdDeviation="5"></feGaussianBlur>
-                      <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-                      <feComponentTransfer>
-                        <feFuncA type="linear" slope="0"></feFuncA>
-                      </feComponentTransfer>
-                      <feMerge>
-                        <feMergeNode></feMergeNode>
-                        <feMergeNode in="SourceGraphic"></feMergeNode>
-                      </feMerge>
-                    </filter>
-                    <polygon class="logo_element" points="256.5 191.5 256.5 0.5 319.5 0.5 319.5 128.5 383.5 128.5 383.5 191.5 256.5 191.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M383,417V545h64v62H321V417h62m1-1H320V608H448V544H384V416Z" transform="translate(-64 -416)"></path>
-                    <polygon points="384.5 447.5 384.5 415.5 319.5 415.5 319.5 447.5 256.5 447.5 256.5 256.5 447.5 256.5 447.5 351.5 384.5 351.5 384.5 319.5 319.5 319.5 319.5 352.5 383.5 352.5 383.5 384.5 447.5 384.5 447.5 447.5 384.5 447.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M511,673v94H449V735H383v34h64v32h64v62H449V831H383v32H321V673H511m1-1H320V864h64V832h64v32h64V800H448V768H384V736h64v32h64V672Z" transform="translate(-64 -416)"></path>
-                    <path d="M704.5,863.5v-32h-65v32h-63v-191h191v191Zm-65-95h65v-33h-65Z" transform="translate(-64 -416)" filter="url(#dropshadow)"></path>
-                    <path d="M767,673V863H705V831H639v32H577V673H767M639,769h66V735H639v34m129-97H576V864h64V832h64v32h64V672ZM640,768V736h64v32Z" transform="translate(-64 -416)"></path>
-                    <polygon points="768.5 447.5 768.5 256.5 895.5 256.5 895.5 319.5 831.5 319.5 831.5 352.5 959.5 352.5 959.5 415.5 831.5 415.5 831.5 447.5 768.5 447.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M959,673v62H895v34h128v62H895v32H833V673H959m1-1H832V864h64V832h128V768H896V736h64V672Z" transform="translate(-64 -416)"></path>
-                    <polygon points="1024.5 447.5 1024.5 319.5 960.5 319.5 960.5 256.5 1151.5 256.5 1151.5 319.5 1087.5 319.5 1087.5 447.5 1024.5 447.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M1215,673v62h-64V863h-62V735h-64V673h190m1-1H1024v64h64V864h64V736h64V672Z" transform="translate(-64 -416)"></path>
-                    <polygon points="448.5 191.5 448.5 63.5 384.5 63.5 384.5 0.5 575.5 0.5 575.5 63.5 511.5 63.5 511.5 191.5 448.5 191.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M639,417v62H575V607H513V479H449V417H639m1-1H448v64h64V608h64V480h64V416Z" transform="translate(-64 -416)"></path>
-                    <polygon points="832.5 191.5 832.5 63.5 767.5 63.5 767.5 191.5 704.5 191.5 704.5 63.5 640.5 63.5 640.5 0.5 895.5 0.5 895.5 191.5 832.5 191.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M959,417V607H897V479H831V607H769V479H705V417H959m1-1H704v64h64V608h64V480h64V608h64V416Z" transform="translate(-64 -416)"></path>
-                    <rect x="576.5" y="96.5" width="63" height="127" filter="url(#dropshadow)"></rect>
-                    <path d="M703,513V639H641V513h62m1-1H640V640h64V512Z" transform="translate(-64 -416)"></path>
-                    <path d="M1152.5,607.5v-32h-65v32h-63v-191h191v191Zm-65-95h65v-33h-65Z" transform="translate(-64 -416)" filter="url(#dropshadow)"></path>
-                    <path d="M1215,417V607h-62V575h-66v32h-62V417h190m-128,96h66V479h-66v34m129-97H1024V608h64V576h64v32h64V416Zm-128,96V480h64v32Z" transform="translate(-64 -416)"></path>
-                    <polygon points="0.5 191.5 0.5 0.5 63.5 0.5 63.5 128.5 128.5 128.5 128.5 0.5 191.5 0.5 191.5 191.5 0.5 191.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M255,417V607H65V417h62V545h66V417h62m1-1H192V544H128V416H64V608H256V416Z" transform="translate(-64 -416)"></path>
-                    <polygon points="0.5 447.5 0.5 256.5 191.5 256.5 191.5 319.5 63.5 319.5 63.5 384.5 191.5 384.5 191.5 447.5 0.5 447.5" filter="url(#dropshadow)"></polygon>
-                    <path d="M255,673v62H127v66H255v62H65V673H255m1-1H64V864H256V800H128V736H256V672Z" transform="translate(-64 -416)"></path>
-                  </svg></a>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/main_bg1.png" alt="alt"></li>
-          <li class="imgBox"><img class="parallax" src="images/main_bg2.png" alt="alt"></li>
-          <li class="imgBox"><img class="parallax" src="images/main_bg3.png" alt="alt"></li>
-          <li class="imgBox"><img class="parallax" src="images/main_bg4.png" alt="alt"></li>
-          <li class="imgBox"><img class="parallax" src="images/main_bg5.png" alt="alt"></li>
-        </ul>
-        <div id="darkenFilter">
-          <!--rect#rectangle(fill="blue" mask="url(#logoSvg)")-->
-        </div>
+  <body id="smooth-scroll">
+    <header>
+      <div id="logotype">
+        <p class="parallax_close" id="serious">Serious</p>
+        <p class="parallax_normal" id="company">Company</p>
       </div>
-      <div id="arrowDownBox"><a id="arrowParent" href="#page">
-              <svg id="arrowDown" data-name="arrow down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1163 621.5">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="5"></feGaussianBlur>
-                  <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.1"></feFuncA>
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode></feMergeNode>
-                    <feMergeNode in="SourceGraphic"></feMergeNode>
-                  </feMerge>
-                </filter>
-                <polyline points="40 40 581.5 581.5 1123 40" filter="url(#dropshadow)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:80px;"></polyline>
-              </svg></a></div>
-    </div>
-        <header class="menuBar">
+      <div id="header_slider_box">
+        <ul id="header_slider"> 
+          <li class="img_box"><img class="parallax_far" src="images/header_slider/main_bg1.jpg" alt=""></li>
+        </ul>
+      </div>
+    </header>
+        <menu class="menu_bar">
           <ul class="menu">
-            <li class="menuLink"><a href="index.html">home</a></li>
-            <li class="menuLink"><a href="downloads.html">projects</a>
-              <ul class="subMenu">
-                <li class="subMenuLink"><a href="downloads.html">ultimacraft</a></li>
-                <li class="subMenuLink"><a href="downloads.html">better snow</a></li>
-              </ul>
-            </li>
-            <li class="menuLink"><a href="about.html">blog</a></li>
+            <li class="menu_button active_page"><a class="menu_link" href="index.html">Главная</a></li>
+            <li class="menu_button"><a class="menu_link" href="index.html">Играть</a></li>
+            <li class="menu_button"><a class="menu_link" href="index.html">Донат</a></li>
+            <li class="menu_button"><a class="menu_link" href="index.html">Инфо</a></li>
           </ul>
-        </header>
-        <header class="menuBarSecond">
-          <ul class="menu">
-            <li class="menuLink"><a href="index.html">home</a></li>
-            <li class="menuLink"><a href="downloads.html">projects</a>
-              <ul class="subMenu">
-                <li class="subMenuLink"><a href="downloads.html">ultimacraft</a></li>
-                <li class="subMenuLink"><a href="downloads.html">better snow</a></li>
-              </ul>
-            </li>
-            <li class="menuLink"><a href="about.html">blog</a></li>
-          </ul>
-        </header>
-    <!--block text-->
-    <div class="block-light" id="page">
-      <h1>About</h1>
-      <div class="text">
-        <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="stats"></div>
-    </div>
-    <!--block image-->
-    <div class="block-panorama">
-      <div class="imgBox"><img class="parallax" src="images/panorama.png" alt="alt"></div>
-    </div>
-    <!--block columns-->
-    <div class="block-light">
-      <h1>Features</h1>
-      <div class="text">
-        <div class="columns">
-          <ul>
-            <li>custom block models</li>
-            <li>emissive textures</li>
-            <li>custom models</li>
-          </ul>
-          <ul>
-            <li>custom block models</li>
-            <li>emissive textures</li>
-            <li>custom models</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!--block text & image-->
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Models</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
+        </menu>
+    <div id="page">
+      <h1>Сервера</h1>
+      <div class="server_box online"><img src="images/server_logos/logo_1.png" alt="">
+        <div class="info">
+          <h2>Experimental</h2>
+          <div class="ip"><a>1.16.5</a>
+            <p>IP: <a>seriouscompany.ru:25565</a></p>
           </div>
         </div>
       </div>
-      <div class="sliderBorder" id="models">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/3dTab.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Emissive</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
+      <div class="server_box offline"><img src="images/server_logos/logo_1.png" alt="">
+        <div class="info">
+          <h2>Experimental</h2>
+          <div class="ip"><a>1.16.5</a>
+            <p>IP: <a>seriouscompany.ru:25565</a></p>
           </div>
         </div>
       </div>
-      <div class="sliderBorder" id="emissive">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/EmTab.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-        </ul>
-      </div>
+      <h1>Новости</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci tortor, lacinia nec tristique in, laoreet vitae nunc. In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor.</p>
+      <p>Pellentesque tempor at eros et iaculis. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.</p>
+      <p>Morbi at velit eu massa finibus posuere a eget enim. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.</p>
+      <p>Etiam quis purus nec magna vehicula fringilla eget vel nulla. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.</p>
+      <p>Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.</p>
+      <p>Integer nec metus quis ligula dictum laoreet. Cras cursus non est vel faucibus. Duis et diam nec urna laoreet rutrum eget eget augue. Aliquam non porta tellus. Sed aliquet dictum neque et venenatis. Ut tellus felis, pulvinar in orci nec, malesuada elementum mi. Aliquam tincidunt nec nisi in tincidunt. Curabitur maximus, neque vitae consectetur euismod, nulla tellus venenatis felis, vel ultrices risus ligula et leo. Nullam est justo, eleifend eget commodo non, ornare a nisl. Phasellus eu neque vitae odio tempor convallis. Vestibulum ultrices est sed elit vulputate, et condimentum turpis sagittis. Maecenas eu neque vitae justo faucibus auctor. In vitae nisl nisl. Vestibulum a mi interdum, vehicula magna eu, consequat nibh.</p>
+      <p>In venenatis erat eu lacus porta viverra. Fusce vulputate mi condimentum mauris dictum tincidunt. Etiam sit amet viverra magna. Phasellus sit amet elit quam. Cras dictum molestie ullamcorper. Cras fringilla nisi ac nunc laoreet egestas. Sed gravida ornare massa, a pharetra nibh imperdiet quis.</p>
+      <p>Phasellus dignissim sagittis tincidunt. Nam a quam pretium dolor venenatis laoreet eu a diam. Mauris rhoncus nibh non ipsum ornare vulputate. Suspendisse luctus rhoncus nibh. Nam et enim ac dolor tempus tempor. Donec sit amet ullamcorper risus. Nullam enim turpis, lacinia eu risus eu, pellentesque sollicitudin neque. Quisque eu augue vestibulum, elementum lacus in, rutrum felis. In ultrices justo a enim tincidunt, vel laoreet justo semper. Nam consectetur, mauris in ornare tristique, purus ligula aliquet libero, ac facilisis nibh leo a odio. Suspendisse potenti. Aenean nec mauris malesuada, laoreet velit vitae, varius turpis. Proin nunc neque, feugiat pellentesque nunc et, tincidunt rutrum ex. Fusce non nulla dignissim mauris dapibus iaculis quis in felis. In ultricies a ex id congue. Vivamus facilisis fringilla dolor id sagittis.</p>
+      <p>Integer odio dolor, dictum a nisi sit amet, iaculis scelerisque erat. Fusce metus tellus, volutpat eget scelerisque a, tempor in elit. Fusce vel scelerisque enim, quis bibendum augue. Nullam sed ultrices neque. Etiam id nunc maximus, varius ipsum nec, ullamcorper augue. Praesent id enim in libero consequat accumsan. Nunc ac feugiat quam. Duis tortor leo, aliquet non leo non, hendrerit aliquet quam.</p>
+      <p>Donec vehicula tellus at sodales rhoncus. Maecenas eget lobortis tortor. Nunc sit amet sem vel ante sagittis maximus in eu augue. Donec ultricies accumsan nibh, vitae mollis dolor gravida at. Vivamus convallis finibus tortor in luctus. In scelerisque, turpis dignissim mollis malesuada, eros massa luctus erat, nec placerat urna augue ac augue. Cras bibendum mi sit amet hendrerit porta. Duis feugiat, ligula facilisis dignissim fermentum, lacus ex sodales metus, pharetra sollicitudin dui velit a arcu. Sed sollicitudin molestie scelerisque. Sed iaculis quis dolor eu aliquam. In in leo blandit massa vestibulum feugiat. Ut eleifend pellentesque dolor, eget egestas odio consectetur nec. In nunc risus, volutpat eget sodales at, sollicitudin a lacus. Donec ipsum velit, maximus sed arcu quis, pulvinar pharetra arcu. Maecenas a purus libero. Pellentesque maximus tortor nec sem fermentum varius.</p>
     </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Custom Texture Models</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="ctm">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/CtmTab.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Custom Item Textures</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="cit">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/CitTab.jpg" alt="alt">
-            <p class="desc"></p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Enhanced Biomes</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="enhanced_biomes.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="biomes">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/world1.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/world2.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/world3.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/world4.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/world5.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!--block columns-->
-    <div class="block-light">
-      <h1>Addons</h1>
-      <div class="text">
-        <div class="columns">
-          <ul>
-            <li>custom block models</li>
-            <li>emissive textures</li>
-            <li>custom models</li>
-          </ul>
-          <ul>
-            <li>custom block models</li>
-            <li>emissive textures</li>
-            <li>custom models</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!--block text & image-->
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Dark</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="dark">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/addonDark1.png" alt="alt">
-            <p class="desc"></p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonDark2.png" alt="alt">
-            <p class="desc"></p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonDark3.png" alt="alt">
-            <p class="desc"></p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>PBR</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="ultimacraft_pbr.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="pbr">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/addonPBR1.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonPBR2.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonPBR3.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonPBR4.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonPBR5.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Leaf</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="leaf">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/addonLeaf1.png" alt="alt">
-            <p class="desc">Shaders: Sildrus Enhanced Default</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>Mobs</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="downloads.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="mobs">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/addonMobs1.png" alt="alt">
-            <p class="desc">Shaders: Vanilla Plus</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonMobs2.png" alt="alt">
-            <p class="desc">Shaders: Vanilla Plus</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="block-with-image">
-      <div class="textBox">
-        <div class="text">
-          <h1>High Res</h1>
-          <p>Ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="links"><a href="downloads.html">Download</a><a href="ultimacraft_hr.html">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="sliderBorder" id="hr">
-        <ul class="sliderSmallBox">
-          <li class="imgBox"><img class="parallax" src="images/addonHR1.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR2.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR3.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR4.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR5.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR6.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR7.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-          <li class="imgBox"><img class="parallax" src="images/addonHR8.png" alt="alt">
-            <p class="desc">Shaders: Kappa</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <script src="js/main.js"></script>
     <footer>
       <div id="navigation">
         <ul class="navList">
           <li class="navItem">
+            <h1>Projects</h1>
+          </li>
+          <li class="navItem"><a href="index.html">UltimaCraft</a></li>
+          <li class="navItem"><a href="better_snow.html" target="_blank">Better Snow</a></li>
+        </ul>
+        <ul class="navList">
+          <li class="navItem">
             <h1>Features</h1>
           </li>
-          <li class="navItem"><a href="#models">Models</a></li>
-          <li class="navItem"><a href="#emissive">Emissive</a></li>
-          <li class="navItem"><a href="#ctm">CTM</a></li>
-          <li class="navItem"><a href="#cit">CIT</a></li>
-          <li class="navItem"><a href="#biomes">Biomes</a></li>
+          <li class="navItem"><a href="models.html">Models</a></li>
+          <li class="navItem"><a href="emissive.html">Emissive</a></li>
+          <li class="navItem"><a href="ctm.html">CTM</a></li>
+          <li class="navItem"><a href="cit.html">CIT</a></li>
+          <li class="navItem"><a href="enhanced_biomes.html">Biomes</a></li>
         </ul>
         <ul class="navList">
           <li class="navItem">
             <h1>Addons</h1>
           </li>
-          <li class="navItem"><a href="#dark">Dark</a></li>
-          <li class="navItem"><a href="#pbr">PBR</a></li>
-          <li class="navItem"><a href="#leaf">Leaf</a></li>
-          <li class="navItem"><a href="#mobs">Mobs</a></li>
-          <li class="navItem"><a href="#hr">HR</a></li>
+          <li class="navItem"><a href="ultimacraft_dark.html">Dark</a></li>
+          <li class="navItem"><a href="ultimacraft_pbr.html">PBR</a></li>
+          <li class="navItem"><a href="ultimacraft_leaf.html">Leaf</a></li>
+          <li class="navItem"><a href="ultimacraft_mobs.html">Mobs</a></li>
+          <li class="navItem"><a href="ultimacraft_hr.html">HR</a></li>
         </ul>
         <ul class="navList">
           <li class="navItem">
             <h1>Links</h1>
           </li>
-          <li class="navItem"><a href="#dark">CurseForge</a></li>
-          <li class="navItem"><a href="#pbr">MCPlanet</a></li>
-          <li class="navItem"><a href="#leaf">Patreon</a></li>
+          <li class="navItem"><a href="https://www.curseforge.com/minecraft/texture-packs/ultimacraft" target="_blank">CurseForge</a></li>
+          <li class="navItem"><a href="https://www.planetminecraft.com/texture-pack/ultimacraft-4486358" target="_blank">MCPlanet</a></li>
+          <li class="navItem"><a href="#">GitHub</a></li>
         </ul>
-      </div><a id="logoCover">
-            <svg id="logoSvg" data-name="uc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 448">
-              <title>ultimacraft</title>
-              <filter id="dropshadow" height="130%">
-                <feGaussianBlur in="SourceAlpha" stdDeviation="5"></feGaussianBlur>
-                <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-                <feComponentTransfer>
-                  <feFuncA type="linear" slope="0"></feFuncA>
-                </feComponentTransfer>
-                <feMerge>
-                  <feMergeNode></feMergeNode>
-                  <feMergeNode in="SourceGraphic"></feMergeNode>
-                </feMerge>
-              </filter>
-              <polygon class="logo_element" points="256.5 191.5 256.5 0.5 319.5 0.5 319.5 128.5 383.5 128.5 383.5 191.5 256.5 191.5" filter="url(#dropshadow)"></polygon>
-              <path d="M383,417V545h64v62H321V417h62m1-1H320V608H448V544H384V416Z" transform="translate(-64 -416)"></path>
-              <polygon points="384.5 447.5 384.5 415.5 319.5 415.5 319.5 447.5 256.5 447.5 256.5 256.5 447.5 256.5 447.5 351.5 384.5 351.5 384.5 319.5 319.5 319.5 319.5 352.5 383.5 352.5 383.5 384.5 447.5 384.5 447.5 447.5 384.5 447.5" filter="url(#dropshadow)"></polygon>
-              <path d="M511,673v94H449V735H383v34h64v32h64v62H449V831H383v32H321V673H511m1-1H320V864h64V832h64v32h64V800H448V768H384V736h64v32h64V672Z" transform="translate(-64 -416)"></path>
-              <path d="M704.5,863.5v-32h-65v32h-63v-191h191v191Zm-65-95h65v-33h-65Z" transform="translate(-64 -416)" filter="url(#dropshadow)"></path>
-              <path d="M767,673V863H705V831H639v32H577V673H767M639,769h66V735H639v34m129-97H576V864h64V832h64v32h64V672ZM640,768V736h64v32Z" transform="translate(-64 -416)"></path>
-              <polygon points="768.5 447.5 768.5 256.5 895.5 256.5 895.5 319.5 831.5 319.5 831.5 352.5 959.5 352.5 959.5 415.5 831.5 415.5 831.5 447.5 768.5 447.5" filter="url(#dropshadow)"></polygon>
-              <path d="M959,673v62H895v34h128v62H895v32H833V673H959m1-1H832V864h64V832h128V768H896V736h64V672Z" transform="translate(-64 -416)"></path>
-              <polygon points="1024.5 447.5 1024.5 319.5 960.5 319.5 960.5 256.5 1151.5 256.5 1151.5 319.5 1087.5 319.5 1087.5 447.5 1024.5 447.5" filter="url(#dropshadow)"></polygon>
-              <path d="M1215,673v62h-64V863h-62V735h-64V673h190m1-1H1024v64h64V864h64V736h64V672Z" transform="translate(-64 -416)"></path>
-              <polygon points="448.5 191.5 448.5 63.5 384.5 63.5 384.5 0.5 575.5 0.5 575.5 63.5 511.5 63.5 511.5 191.5 448.5 191.5" filter="url(#dropshadow)"></polygon>
-              <path d="M639,417v62H575V607H513V479H449V417H639m1-1H448v64h64V608h64V480h64V416Z" transform="translate(-64 -416)"></path>
-              <polygon points="832.5 191.5 832.5 63.5 767.5 63.5 767.5 191.5 704.5 191.5 704.5 63.5 640.5 63.5 640.5 0.5 895.5 0.5 895.5 191.5 832.5 191.5" filter="url(#dropshadow)"></polygon>
-              <path d="M959,417V607H897V479H831V607H769V479H705V417H959m1-1H704v64h64V608h64V480h64V608h64V416Z" transform="translate(-64 -416)"></path>
-              <rect x="576.5" y="96.5" width="63" height="127" filter="url(#dropshadow)"></rect>
-              <path d="M703,513V639H641V513h62m1-1H640V640h64V512Z" transform="translate(-64 -416)"></path>
-              <path d="M1152.5,607.5v-32h-65v32h-63v-191h191v191Zm-65-95h65v-33h-65Z" transform="translate(-64 -416)" filter="url(#dropshadow)"></path>
-              <path d="M1215,417V607h-62V575h-66v32h-62V417h190m-128,96h66V479h-66v34m129-97H1024V608h64V576h64v32h64V416Zm-128,96V480h64v32Z" transform="translate(-64 -416)"></path>
-              <polygon points="0.5 191.5 0.5 0.5 63.5 0.5 63.5 128.5 128.5 128.5 128.5 0.5 191.5 0.5 191.5 191.5 0.5 191.5" filter="url(#dropshadow)"></polygon>
-              <path d="M255,417V607H65V417h62V545h66V417h62m1-1H192V544H128V416H64V608H256V416Z" transform="translate(-64 -416)"></path>
-              <polygon points="0.5 447.5 0.5 256.5 191.5 256.5 191.5 319.5 63.5 319.5 63.5 384.5 191.5 384.5 191.5 447.5 0.5 447.5" filter="url(#dropshadow)"></polygon>
-              <path d="M255,673v62H127v66H255v62H65V673H255m1-1H64V864H256V800H128V736H256V672Z" transform="translate(-64 -416)"></path>
-            </svg></a>
-      <div id="copyright">
-        <p>©2021 UltimaCraft. All rights reserved</p>
       </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/slides.js"></script>
+    <script src="js/scroll-bar.js"></script>
   </body>
 </html>
