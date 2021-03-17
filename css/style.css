@@ -14,6 +14,7 @@ html {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+  overflow: hidden;
 }
 
 .fixed {
@@ -34,6 +35,7 @@ html {
 
 .custom-scrollbar-track {
   background-color: #222222 !important;
+  margin: 0 !important;
 }
 
 header {
@@ -60,6 +62,10 @@ header {
   color: white;
   display: block;
   text-shadow: 0 0 100px black;
+}
+
+#serious, #company {
+  transition: transform 50ms;
 }
 
 #company {
@@ -142,8 +148,8 @@ header {
   display: block;
   text-align: center;
   vertical-align: middle;
-  padding: 1.8rem;
-  transition: background-color .5s, color .5s;
+  padding: 1.4rem;
+  transition: background-color .5s, color .5s, padding .1s, font-size .1s;
 }
 
 .menu_link:hover {
@@ -159,12 +165,12 @@ header {
   max-width: 1024px;
   margin: 0 auto 0 auto;
   box-sizing: border-box;
-  padding: 0 5vw;
+  padding: 0 5vw 3vh 5vw;
   background-color: #ffffff;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.25);
 }
 
-#page h1 {
+#page .right, #page .left {
   font-size: 3.6rem;
   background: linear-gradient(0.25turn, rgba(0, 133, 255, 0.25), #ffffff);
   padding: .5rem 2rem;
@@ -172,7 +178,7 @@ header {
   margin: 4rem 0;
 }
 
-#page h1:nth-child(odd) {
+#page .right {
   text-align: right;
   background: linear-gradient(0.25turn, #ffffff, rgba(0, 133, 255, 0.25));
 }
@@ -294,7 +300,10 @@ header {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 4rem;
+  overflow: hidden;
   padding-bottom: 5rem;
+  max-width: auto;
+  transition: max-width 1s;
 }
 
 .news_block::last-child {
@@ -310,6 +319,7 @@ header {
 
 .news_block .news_header img {
   width: 100%;
+  margin: 0;
 }
 
 .news_block h2 {
@@ -318,16 +328,90 @@ header {
   margin: 2rem 0 0 0;
 }
 
-.news_block p, .news_block ul, .news_block li {
+.content, .news_block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.content p, .content ul, .content li, .content hr, .content iframe, .content img, .content .text_box, .news_block p, .news_block ul, .news_block li, .news_block hr, .news_block iframe, .news_block img, .news_block .text_box {
   margin: 2rem 5rem 0 5rem;
   padding: 0;
   font-size: 1.8rem;
 }
 
-.news_block ul {
+.content ul, .news_block ul {
   list-style: square;
 }
 
-.news_block li {
+.content li, .news_block li {
   margin: 2rem 0 0 2rem;
+}
+
+.content a, .news_block a {
+  color: #0085FF;
+}
+
+.content hr, .news_block hr {
+  width: calc(100% - 10rem);
+}
+
+.content iframe, .news_block iframe {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content iframe, .content img, .news_block iframe, .news_block img {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.content .blue, .news_block .blue {
+  color: #0085FF;
+}
+
+.content .orange, .news_block .orange {
+  color: #FF7B01;
+}
+
+.content .green, .news_block .green {
+  color: #43FF01;
+}
+
+.content .text_box, .news_block .text_box {
+  position: relative;
+  overflow-y: scroll;
+  height: auto;
+}
+
+.content .text_box p, .news_block .text_box p {
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.show, .hide {
+  display: inline;
+  color: #0085FF;
+  margin: 2rem auto 0 auto;
+  text-decoration: none;
+}
+
+.publication {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 5rem 0 5rem;
+  padding: 0;
+  font-size: 1.2rem;
+  word-spacing: .5rem;
+  color: #666666;
+}
+
+.button {
+  padding: 1rem 3rem;
+  background-color: #333333;
+  color: white;
+  transition: background-color .5s;
+}
+
+.button:hover {
+  background-color: #0085FF;
 }
