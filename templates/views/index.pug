@@ -1,8 +1,10 @@
 extends ../layouts/layout.pug
 
 include ../views/modules/objects/server.pug
+include ../views/modules/objects/menu.pug
 
 block main
+    +menu("active_page", "", "", "")
     #bg 
         #page
             h1.right Сервера
@@ -51,8 +53,6 @@ block main
                     time(datetime="2021-03-23 10:37") 23.03.2021 10:37
                     span published by _GrandMagus_
             .news_block#post3
-                .news_header
-                    img.parallax_poster(src="images/header_slider/main_bg4.jpg", alt="")
                 h2 Title
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
                 p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 

@@ -1,11 +1,11 @@
-mixin menu()
+mixin menu(a, b, c, d)
     menu.menu_bar
         ul.menu
-            li.menu_button.active_page
+            li.menu_button(class=a)
                 a.menu_link(href="index.html") Главная
 
-            li.menu_button
-                a.menu_link(href="index.html") Играть
+            li.menu_button(class=b)
+                a.menu_link(href="play.html") Играть
                 //- ul.sub_menu
                 //-     li.sub_menu_button
                 //-         div
@@ -14,7 +14,7 @@ mixin menu()
                 //-         div
                 //-             a.menu_link(href="https://www.curseforge.com/minecraft/texture-packs/better-snow") snowier snow
 
-            li.menu_button
+            li.menu_button(class=c)
                 a.menu_link(href="index.html") Донат
-            li.menu_button
+            li.menu_button(class=d)
                 a.menu_link(href="index.html") Инфо

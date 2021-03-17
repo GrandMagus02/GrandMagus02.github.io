@@ -11,8 +11,8 @@ $(document).ready(function(){
     let fadeTime = 300
     let lifeTime = 1000
 
-    $('.ip_adress').each(function() {
-        $(this).click(function() {
+    function popUp(element) {
+        $(element).click(function() {
             copyToClipboard(this)
             if ( !($(this).siblings('.copied_popup').is('span'))) {
                 var $readyPopUp = $("<span>")
@@ -29,5 +29,12 @@ $(document).ready(function(){
                 }, fadeTime)
             }, lifeTime)            
         })
+    }
+
+    $('.ip_adress').each(function() {
+        popUp(this)
+    })
+    $('.email').each(function() {
+        popUp(this)
     })
 })

@@ -1,0 +1,25 @@
+extends ../layouts/layout.pug
+
+include ../views/modules/objects/server.pug
+include ../views/modules/objects/menu.pug
+
+block main
+    +menu("", "active_page", "", "")
+    #bg 
+        #page
+            h1.right Начать играть
+            .news_block
+                ul(style="list-style: decimal;")
+                    li Ознакомится с правилами сервера.
+                    li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                    li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                    li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                    li Дождаться ответа на письмо.
+                    li Зайти на сервер, по присланным в ответе данным.
+block scripts
+    script(src="js/main.js")
+    script(src="js/slides.js")
+    script(src="js/scroll-bar.js")
+    script(src="js/online_circles.js")
+    script(src="js/toggle_block.js")
+    script(src="js/server.js")
