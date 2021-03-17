@@ -1,3 +1,14 @@
+var winHeight = $(window).height()
+$(window).resize(function() {
+    winHeight = $(window).height()
+})
+
+var headerHeight = $('header').height()
+$(window).resize(function() {
+    headerHeight = $('header').height()
+    $('.menu_bar').css('top', headerHeight)
+})
+
 class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
     static pluginName = 'anchor';
 
@@ -22,16 +33,20 @@ class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
     }
 
     handleHash = (hash) => {
-        console.log('hash:', hash);
+        //console.log('hash:', hash);
         
         if (!hash) {
+        return;
+        }
+
+        if (hash === '#') {
         return;
         }
 
         if (hash === '#top') {
         scrollbar.setMomentum(0, -scrollbar.scrollTop);
         } else {
-        console.log('scrollTop:', scrollbar.containerEl.scrollTop);
+        //console.log('scrollTop:', scrollbar.containerEl.scrollTop);
 
         scrollbar.scrollIntoView(document.querySelector(hash), {
             offsetTop: -scrollbar.containerEl.scrollTop,
@@ -68,17 +83,6 @@ var scrollbar = Scrollbar.init(
 
 $('.scrollbar-track').addClass('custom-scrollbar-track')
 $('.scrollbar-thumb').addClass('custom-scrollbar-thumb')
-
-var winHeight = $(window).height()
-$(window).resize(function() {
-    winHeight = $(window).height()
-})
-
-var headerHeight = $('header').height()
-$(window).resize(function() {
-    headerHeight = $('header').height()
-    $('.menu_bar').css('top', headerHeight)
-})
 
 scrollbar.addListener(function(status) {
     var fixedElem = document.getElementsByClassName('fixed');
@@ -120,10 +124,10 @@ scrollbar.addListener(function(status) {
             }
         })
     }
-    parallax('.parallax_close', 5, 1)
-    parallax('.parallax_normal', 6, 1)
+    parallax('.parallax_close', 4, 1)
+    parallax('.parallax_normal', 5, 1)
     parallax('.parallax_far', 30, 1)
-    parallax('.parallax_poster', 70, 1.2)
+    parallax('.parallax_poster', 120, 1.3)
  });
 
 $(document).ready(function() {
@@ -136,10 +140,10 @@ $(document).ready(function() {
             })
         })
     }
-    parallaxStart('.parallax_close', 5, 1)
-    parallaxStart('.parallax_normal', 6, 1)
+    parallaxStart('.parallax_close', 4, 1)
+    parallaxStart('.parallax_normal', 5, 1)
     parallaxStart('.parallax_far', 30, 1)
-    parallaxStart('.parallax_poster', 70, 1.2)
+    parallaxStart('.parallax_poster', 120, 1.3)
 })
 
 window.onload = () => {
@@ -152,7 +156,7 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
-setTimeout(function () {
-    scrollbar.scrollTop = $(document).scrollTop()
-    console.log(scrollbar.scrollTop + ' ' + $(document).scrollTop())
-}, 1000)
+// setTimeout(function () {
+//     scrollbar.scrollTop = $(document).scrollTop()
+//     console.log(scrollbar.scrollTop + ' ' + $(document).scrollTop())
+// }, 1000)

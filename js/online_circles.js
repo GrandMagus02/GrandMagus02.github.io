@@ -17,11 +17,13 @@ function setCircleProgress(elem, val) {
     })
 }
 
-serverCircles = document.querySelectorAll('.circle_bar')
-serverCircles.forEach(function callback(element, index) {
-    var value1 = $(element).children().html().split('/')[0]
-    var value2 = $(element).children().html().split('/')[1]
-    value1 /= value2
-    setCircleProgress('#server' + (index + 1), value1)
-    $(element).css('margin-right', imgSize - size)
-});
+setTimeout(function () {
+    serverCircles = document.querySelectorAll('.circle_bar')
+    serverCircles.forEach(function callback(element, index) {
+        var value1 = $(element).children().html().split('/')[0]
+        var value2 = $(element).children().html().split('/')[1]
+        value1 /= value2
+        setCircleProgress('#server' + (index + 1), value1)
+        $(element).css('margin-right', imgSize - size)
+    })
+}, 1000)

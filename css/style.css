@@ -4,7 +4,6 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
-  background-color: #FFF3E8;
   font-size: 1.4rem;
   color: #333333;
 }
@@ -161,6 +160,10 @@ header {
   font-weight: 700;
 }
 
+#bg {
+  background-image: url(../images/bg_pattern.jpg);
+}
+
 #page {
   max-width: 1024px;
   margin: 0 auto 0 auto;
@@ -233,6 +236,10 @@ header {
 
 .server_box .left_part .ip a {
   color: #0085FF;
+}
+
+.server_box .left_part .ip .ip_adress {
+  cursor: pointer;
 }
 
 .server_box .right_part {
@@ -414,4 +421,25 @@ header {
 
 .button:hover {
   background-color: #0085FF;
+}
+
+.copied_popup {
+  position: absolute;
+  color: #ffffff;
+  font-weight: bolder;
+  background-color: #0085FF;
+  padding: 1rem;
+  margin-top: -1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.copied_popup::before {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #0085FF;
+  transform: rotateZ(45deg);
+  margin-left: -1.8rem;
+  margin-top: 0.3rem;
 }
