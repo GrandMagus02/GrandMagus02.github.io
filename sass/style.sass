@@ -12,6 +12,7 @@ body
 
 html
   font-family: 'Montserrat', sans-serif
+  background-color: $dark_gray
   padding: 0
   margin: 0
   font-size: 62.5%
@@ -33,10 +34,21 @@ html
   background-color: $dark_gray !important
   margin: 0 !important
 
+a
+  transition: color .5s
+  &:hover, &:focus, &:active
+    outline: none
+    color: $orange
+
+.centered
+  display: flex
+  justify-content: center
+
 @import modules/header.sass
 @import modules/menu.sass
+@import modules/totop.sass
 @import modules/body.sass
 @import modules/servers.sass
-@import modules/news.sass
+@import modules/blocks.sass
 @import modules/copied_popup.sass
 @import modules/footer.sass

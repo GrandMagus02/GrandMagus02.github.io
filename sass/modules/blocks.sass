@@ -1,0 +1,157 @@
+.block, .card
+    box-sizing: border-box
+    background-color: $white
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-bottom: $margin_between_boxes
+    overflow: hidden
+    padding-bottom: 5rem
+    max-width: auto
+    box-shadow: 0 0 20px rgba($black, .1)
+    transform: scale(1)
+    transition: transform .5s, box-shadow .5s
+    &:hover
+        box-shadow: 0 0 20px rgba($black, .25)
+        transform: scale(1.01)
+    &::last-child
+        margin-bottom: 0
+    .block_header
+        max-height: 30vh
+        overflow: hidden
+        display: flex
+        align-items: center
+        img
+            width: 100%
+            margin: 0
+    h2
+        font-size: 2.4rem
+        text-align: center
+        margin: 2rem 0 0 0
+        
+.content, .block
+    position: relative
+    display: flex
+    flex-direction: column
+    p, ul, li, hr, iframe, img, .text_box
+        margin: 2rem 5rem 0 5rem
+        padding: 0
+        font-size: 1.8rem
+    ul
+        list-style: square
+    li
+        margin: 2rem 0 0 2rem
+    a
+        color: $blue
+        transition: color .5s
+        &:hover, &:focus, &:active
+            outline: none
+            color: $orange
+    hr
+        width: calc(100% - 10rem)
+    iframe
+        margin-right: auto
+        margin-left: auto
+    iframe, img
+        box-shadow: 0 0 20px rgba($black, .25)
+    .blue
+        color: $blue
+    .orange
+        color: $orange
+    .green
+        color: $green
+    .text_box
+        position: relative
+        overflow-y: scroll
+        height: auto
+        p
+            margin: 0
+            margin-top: 2rem
+
+.show, .hide
+    display: inline
+    color: $blue
+    margin: 2rem auto 0 auto
+    text-decoration: none
+
+.publication
+    display: flex
+    justify-content: space-between
+    margin: 2rem 5rem 0 5rem
+    padding: 0
+    font-size: 1.2rem
+    word-spacing: .5rem
+    color: $lighten_gray
+.button
+    cursor: pointer
+    padding: 1rem 3rem
+    background-color: $darken_gray
+    border: none
+    border-radius: 0
+    font-size: 1.8rem
+    font-weight: 600
+    color: white
+    box-shadow: 0 0 20px rgba($black, 0)
+    transition: background-color .5s, box-shadow .5s
+    &:hover, &:focus, &:active
+        outline: none
+        background-color: $blue
+        box-shadow: 0 0 20px rgba($black, .25)
+.support
+    display: flex
+    justify-content: center
+    .button
+        font-size: 2.4rem
+        padding: 2rem 6rem
+.email
+    cursor: pointer
+
+.cards_box
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+.card
+    max-width: 400px 
+    display: block
+    .block_header
+        max-height: 100vh
+        overflow: hidden
+        display: flex
+        align-items: center
+        img
+            width: 100%
+            height: 100%
+            margin: 0
+    ul, p
+        margin: 1rem 5rem 0 5rem
+        font-size: 1.8rem
+        font-weight: bold
+    ul
+        padding-left: 1.8rem
+    li
+        font-size: 1.4rem
+        font-weight: 500
+.blue
+    background: linear-gradient($white 50%, rgba($blue, .25))
+.green
+    background: linear-gradient($white 50%, rgba($green, .25))
+.orange
+    background: linear-gradient($white 50%, rgba($orange, .25))
+.yellow
+    background: linear-gradient($white 50%, rgba($yellow, .25))
+.magenta
+    background: linear-gradient($white 50%, rgba($magenta, .25))
+.purple
+    background: linear-gradient($white 50%, rgba($purple, .25))
+.buy
+    margin: 2rem 5rem 0 5rem
+    display: flex
+    justify-content: space-between
+.price
+    font-size: 3.6rem
+    font-weight: 600
+    color: $blue
+    

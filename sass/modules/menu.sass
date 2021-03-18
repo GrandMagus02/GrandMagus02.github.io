@@ -35,7 +35,12 @@
     padding: 1.4rem
     transition: background-color .5s, color .5s, padding .1s, font-size .1s
     &:hover
+        color: $white
         background-color: $blue
+    &:focus, &:active
+        outline: none
+        color: $white
+        background-color: $orange
 
 .active_page
     .menu_link

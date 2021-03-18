@@ -5,3 +5,17 @@ $(window).resize(function() {
     menuHeight = $('menu').height()
     $('#page').css('padding-top', menuHeight)
 })
+
+$('.content').each(function() {
+    $( this ).toggle()
+})
+$('.hide').each(function() {
+    //let parentId = $( this ).parent().attr('id')
+    //$( this ).attr('href', '#' + parentId)
+    $( this ).toggle()
+})
+$('.top_bouble').each(function() {
+    //let parentId = $( this ).parent().attr('id')
+    //$( this ).attr('href', '#' + parentId)
+    $( this ).toggle()
+})

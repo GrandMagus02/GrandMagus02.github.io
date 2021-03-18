@@ -86,7 +86,9 @@ $('.scrollbar-thumb').addClass('custom-scrollbar-thumb')
 
 scrollbar.addListener(function(status) {
     var fixedElem = document.getElementsByClassName('fixed');
+    var fixedElemBottom = document.getElementsByClassName('top_bouble');
     var offset = status.offset;
+    let $topBouble = $('.top_bouble')
     
     // var menu_size_small = '1rem'
     // var menu_font_size_small = '1.8rem'
@@ -95,6 +97,7 @@ scrollbar.addListener(function(status) {
 
     if (offset.y >= headerHeight) {
         $('.menu_bar').addClass('fixed')
+        $topBouble.fadeIn(1000)
         // $('.menu_link').css({
         //     'padding': menu_size_small,
         //     'font-size': menu_font_size_small
@@ -103,6 +106,7 @@ scrollbar.addListener(function(status) {
     else {
         $('.menu_bar').removeClass('fixed')
         $('.menu_bar').css('top', headerHeight)
+        $topBouble.fadeOut(500)
         // $('.menu_link').css({
         //     'padding': menu_size,
         //     'font-size': menu_font_size
@@ -112,6 +116,10 @@ scrollbar.addListener(function(status) {
     for (let i = 0; i < fixedElem.length; ++i) {
         fixedElem[i].style.top = offset.y + 'px';
         fixedElem[i].style.left = offset.x + 'px';
+    }
+
+    for (let i = 0; i < fixedElemBottom.length; ++i) {
+        fixedElemBottom[i].style.top = offset.y + winHeight - fixedElemBottom[i].style.height - 100 + 'px';
     }
     
     const parallax = (subject, division, scale) => {
@@ -144,6 +152,11 @@ $(document).ready(function() {
     parallaxStart('.parallax_normal', 5, 1)
     parallaxStart('.parallax_far', 30, 1)
     parallaxStart('.parallax_poster', 120, 1.3)
+})
+
+$('.top_bouble').click(() => {
+    console.log('yes')
+    scrollbar.setMomentum(0, -scrollbar.scrollTop);
 })
 
 window.onload = () => {
