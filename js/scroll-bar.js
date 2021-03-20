@@ -9,6 +9,8 @@ $(window).resize(function() {
     $('.menu_bar').css('top', headerHeight)
 })
 
+var menuHeight = $('.menu_bar').height() + 20;
+
 class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
     static pluginName = 'anchor';
 
@@ -49,7 +51,7 @@ class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
         //console.log('scrollTop:', scrollbar.containerEl.scrollTop);
 
         scrollbar.scrollIntoView(document.querySelector(hash), {
-            offsetTop: -scrollbar.containerEl.scrollTop,
+            offsetTop: -scrollbar.containerEl.scrollTop + menuHeight,
         });
         }
     };

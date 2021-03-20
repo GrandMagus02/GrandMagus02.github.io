@@ -166,15 +166,10 @@ header {
   transition: background-color .5s, color .5s, padding .1s, font-size .1s;
 }
 
-.menu_link:hover {
-  color: #ffffff;
-  background-color: #0085FF;
-}
-
-.menu_link:focus, .menu_link:active {
+.menu_link:hover, .menu_link:focus, .menu_link:active {
   outline: none;
   color: #ffffff;
-  background-color: #FF7B01;
+  background-color: #0085FF;
 }
 
 .active_page .menu_link {
