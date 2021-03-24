@@ -6,7 +6,7 @@ var tabletWidth = 875
 function menu() {
     var $listButton = $( '.listed' )
     var $burger = $( '.burger' )
-    var $subMenu = '.sub_menu'
+    var $subMenu = $('.sub_menu')
     var fadeTime = 300
     
     // $listButton.on( 'mouseenter', () => {
@@ -34,6 +34,7 @@ function menu() {
     console.log('mobile')
     $burger.on( 'click', () => {
         if (winWidth <= mobileWidth) {
+            $('.menu_bar').addClass('fixed')
             $burger.toggleClass('burger')
             $burger.toggleClass('active_burger')
             $( '.menu_bar' ).fadeToggle(fadeTime)

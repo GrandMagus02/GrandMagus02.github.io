@@ -95,14 +95,16 @@ scrollbar.addListener(function(status) {
     if ($("#header_slider_box").length) {
         if (offset.y >= headerHeight) {
             $('.menu_bar').addClass('fixed')
-            if (winWidth > tabletWidth) {
+            if (winWidth <= tabletWidth) {
                 $topBouble.fadeIn(1000)
             }
         }
         else {
-            $('.menu_bar').removeClass('fixed')
-            $('.menu_bar').css('top', headerHeight)
-            $topBouble.fadeOut(500)
+            if (winWidth > tabletWidth) {
+                $('.menu_bar').removeClass('fixed')
+                $('.menu_bar').css('top', headerHeight)
+                $topBouble.fadeOut(500)
+            }
         }
     } else {
         $('.menu_bar').addClass('fixed')
