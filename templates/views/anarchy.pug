@@ -1,0 +1,58 @@
+extends ../layouts/layout.pug
+
+include ../views/modules/objects/server.pug
+include ../views/modules/objects/menu.pug
+
+block main
+    +menu("active_page", "", "", "", "")
+    #bg
+        .block_header.block_header_title
+            img.parallax_poster(src="images/anarchy/1_image.jpg", alt="")
+            h1.title.absolute Анархия
+        #page
+            .block
+                h2 О проекте
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
+                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
+            
+            .block_header#create_a_team
+                img.parallax_poster(src="images/anarchy/2_image.jpg", alt="")
+                h1.title.absolute Собери команду!
+            .block
+                h2 Командная игра
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
+                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
+            
+            .block_header#hold_regions
+                img.parallax_poster(src="images/anarchy/3_image.jpg", alt="")
+                h1.title.absolute Захватывайте!
+            .block
+                h2 Захват регионов
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
+                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
+            
+            .block_header#fight
+                img.parallax_poster(src="images/anarchy/4_image.jpg", alt="")
+                h1.title.absolute Сражайтесь!
+            .block
+                h2 Кланы
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
+                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
+            
+            .block_header#win
+                img.parallax_poster(src="images/anarchy/5_image.jpg", alt="")
+                h1.title.absolute Побеждайте!
+            .block
+                h2 Призы
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
+                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
+
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/slides.js")
+    script(src="js/scroll-bar.js")
+    script(src="js/online_circles.js")
+    script(src="js/toggle_block.js")
+    script(src="js/server.js")
+    script(src="js/menu.js")

@@ -2,8 +2,16 @@ footer
     display: flex
     justify-content: center
     flex-direction: column
-    background-color: $dark_gray
-    color: $lighten_gray
+    @include dark()
+        background-color: $darken_gray
+        color: $lighten_gray
+    @include light()
+        background-color: $light_gray
+        color: $lighten_gray
+    @include none()
+        background-color: $darken_gray
+        color: $lighten_gray
+    box-shadow: 0 0 20px 5px rgba($black, .25)
     padding: 6vh 0
     ul
         padding: 0
@@ -23,6 +31,8 @@ footer
     font-weight: 500
     margin: 0 auto
     margin-top: 6vh
+    @include breakpoint($d-phone)
+        font-size: 1.4rem
 
 #navigation
     display: flex
@@ -33,3 +43,6 @@ footer
     align-content: center
     justify-content: space-between
     flex-direction: row
+    @include breakpoint($d-phone)
+        flex-direction: column
+        width: 100vw

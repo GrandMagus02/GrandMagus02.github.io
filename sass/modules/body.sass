@@ -1,19 +1,35 @@
 #bg
-    background-image: url(../images/bg_pattern.jpg)
+    @include dark()
+        //background-image: url(../images/bg_pattern_dark.jpg)
+        background-color: $dark_gray
+    @include light()
+        //background-image: url(../images/bg_pattern.jpg)
+        background-color: $bg
+    @include none()
+        //background-image: url(../images/bg_pattern.jpg)
+        background-color: $bg
+    max-width: 100vw
+    position: relative
+    z-index: 3
 #page
     max-width: $page_width
     margin: 0 auto 0 auto
     box-sizing: border-box
-    padding: 0 5vw 3vh 5vw
-    background-color: $white
-    box-shadow: 0 0 100px rgba($black, .25)
-
+    padding: 5vh 5vw
+    //background-color: $white
+    //box-shadow: 0 0 100px rgba($black, .25)
+    position: relative
+    @include breakpoint($d_phone)
+        width: 100vw
+        padding: 3vh 5vw
     .right, .left
         font-size: 3.6rem
-        background: linear-gradient(0.25turn, rgba($blue, .25), $white)
+        background: linear-gradient(0.25turn, rgba($blue, .25), rgba($white, 0))
         padding: .5rem 2rem
         font-weight: bold
         margin: $margin_between_boxes 0
+        @include breakpoint($d_phone)
+            padding: 0
     .right
         text-align: right
-        background: linear-gradient(0.25turn, $white, rgba($blue, .25))
+        background: linear-gradient(0.25turn, rgba($white, 0), rgba($blue, .25))

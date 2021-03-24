@@ -1,18 +1,19 @@
 .top_bouble
     font-family: 'Montserrat', sans-serif
     position: absolute
-    //top: 500px
-    right: 50px
-    width: 64px
-    height: 64px
-    //z-index: 100
+    z-index: 10
+    right: 5vw
+    width: 7rem
+    height: 7rem
+    margin-bottom: -5vh
     cursor: pointer
     font-size: 4.8rem
     border: none
-    background-color: $darken_gray
+    background-color: rgba($darken_gray, .8)
+    backdrop-filter: blur(10px)
     color: $white
     text-align: center
-    border-radius: 50%
+    border-radius: 0
     box-shadow: 0 0 20px rgba($black, .25)
     transition: background-color .5s
     &:hover, &:focus, &:active

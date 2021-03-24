@@ -7,29 +7,30 @@
     <script src="libs/smooth-scrollbar.js"></script>
     <script src="libs/circle-progress.min.js"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta content="width=1180" name="viewport" id="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>UltimaCraft</title>
   </head>
   <body id="smooth-scroll">
-    <header>
-      <div id="logotype">
-        <p class="parallax_close" id="serious">Serious</p>
-        <p class="parallax_normal" id="company">Company</p>
-      </div>
-      <div id="header_slider_box">
-        <ul id="header_slider"> 
-          <li class="img_box"><img class="parallax_far" src="images/header_slider/main_bg1.jpg" alt=""></li>
-        </ul>
-      </div>
-    </header>
-    <button class="top_bouble">↑</button>
+    <button class="top_bouble">⯅</button><a class="burger fixed">
+      <div class="line"></div></a>
     <menu class="menu_bar">
       <ul class="menu">
-        <li class="menu_button active_page"><a class="menu_link" href="index.html">Главная</a></li>
-        <li class="menu_button"><a class="menu_link" href="play.html">Играть</a></li>
+        <li class="menu_button active_page">
+          <ul class="sub_menu"><a class="menu_link listed" href="index.html">Сервера</a>
+            <li><a class="menu_link" href="anarchy.html">Анархия</a></li>
+            <li><a class="menu_link" href="index.html">Приватный</a></li>
+          </ul>
+        </li>
+        <li class="menu_button"><a class="menu_link" href="news.html">Новости</a></li>
         <li class="menu_button"><a class="menu_link" href="donate.html">Донат</a></li>
-        <li class="menu_button"><a class="menu_link" href="info.html">Инфо</a></li>
+        <li class="menu_button">
+          <ul class="sub_menu"><a class="menu_link listed" href="info.html">Инфо</a>
+            <li><a class="menu_link" href="info.html#rules">Правила</a></li>
+            <li><a class="menu_link" href="info.html#commands">Команды</a></li>
+            <li><a class="menu_link" href="info.html#mehcanics">Механики</a></li>
+          </ul>
+        </li>
       </ul>
     </menu>
     <div id="bg"> 
@@ -83,61 +84,6 @@
             </div>
           </div>
         </div>
-        <h1 class="left">Новости</h1>
-        <div class="block" id="post1">
-          <div class="block_header"><img class="parallax_poster" src="images/header_slider/main_bg3.jpg" alt=""></div>
-          <h2>Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. </p>
-          <hr>
-          <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p><a class="show" href="#" alt="">↓ БОЛЬШЕ ↓</a>
-          <div class="content"><img src="images/header_slider/main_bg5.jpg" alt="">
-            <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p><iframe width="560" height="315" src="https://www.youtube.com/embed/nravt7tOcFU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <ul>Lorem ipsum: 
-              <li><i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.</li>
-              <li><u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.</li>
-              <li><a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.</li>
-              <li>Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.</li>
-            </ul>
-          </div><a class="hide" href="#" alt="">↑ МЕНЬШЕ ↑</a>
-          <div class="publication">
-            <time datetime="2021-03-23 10:37">23.03.2021 10:37</time><span>published by _GrandMagus_</span>
-          </div>
-        </div>
-        <div class="block" id="post2">
-          <div class="block_header"><img class="parallax_poster" src="images/header_slider/main_bg2.jpg" alt=""></div>
-          <h2>Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. </p>
-          <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p><a class="show" href="#" alt="">↓ БОЛЬШЕ ↓</a>
-          <div class="content"><img src="images/header_slider/main_bg1.jpg" alt="">
-            <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p>
-            <ul>Lorem ipsum: 
-              <li><i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.</li>
-              <li><u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.</li>
-              <li><a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.</li>
-              <li>Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.</li>
-            </ul>
-          </div><a class="hide" href="#" alt="">↑ МЕНЬШЕ ↑</a>
-          <div class="publication">
-            <time datetime="2021-03-23 10:37">23.03.2021 10:37</time><span>published by _GrandMagus_</span>
-          </div>
-        </div>
-        <div class="block" id="post3">
-          <h2>Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. </p>
-          <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p><a class="show" href="#" alt="">↓ БОЛЬШЕ ↓</a>
-          <div class="content"><img src="images/header_slider/main_bg5.jpg" alt="">
-            <p>In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. </p>
-            <ul>Lorem ipsum: 
-              <li><i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.</li>
-              <li><u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.</li>
-              <li><a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.</li>
-              <li>Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.</li>
-            </ul>
-          </div><a class="hide" href="#" alt="">↑ МЕНЬШЕ ↑</a>
-          <div class="publication">
-            <time datetime="2021-03-23 10:37">23.03.2021 10:37</time><span>published by _GrandMagus_</span>
-          </div>
-        </div>
       </div>
     </div>
     <footer>
@@ -178,5 +124,6 @@
     <script src="js/online_circles.js"></script>
     <script src="js/toggle_block.js"></script>
     <script src="js/server.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

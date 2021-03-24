@@ -92,28 +92,25 @@ scrollbar.addListener(function(status) {
     var offset = status.offset;
     let $topBouble = $('.top_bouble')
     
-    // var menu_size_small = '1rem'
-    // var menu_font_size_small = '1.8rem'
-    // var menu_size = '1.8rem'
-    // var menu_font_size = '2.4rem'
-
-    if (offset.y >= headerHeight) {
+    if ($("#header_slider_box").length) {
+        if (offset.y >= headerHeight) {
+            $('.menu_bar').addClass('fixed')
+            if (winWidth > tabletWidth) {
+                $topBouble.fadeIn(1000)
+            }
+        }
+        else {
+            $('.menu_bar').removeClass('fixed')
+            $('.menu_bar').css('top', headerHeight)
+            $topBouble.fadeOut(500)
+        }
+    } else {
         $('.menu_bar').addClass('fixed')
-        $topBouble.fadeIn(1000)
-        // $('.menu_link').css({
-        //     'padding': menu_size_small,
-        //     'font-size': menu_font_size_small
-        // })
+        if (winWidth > tabletWidth) {
+            $topBouble.fadeIn(1000)
+        }
     }
-    else {
-        $('.menu_bar').removeClass('fixed')
-        $('.menu_bar').css('top', headerHeight)
-        $topBouble.fadeOut(500)
-        // $('.menu_link').css({
-        //     'padding': menu_size,
-        //     'font-size': menu_font_size
-        // })
-    }
+    
 
     for (let i = 0; i < fixedElem.length; ++i) {
         fixedElem[i].style.top = offset.y + 'px';
@@ -137,7 +134,7 @@ scrollbar.addListener(function(status) {
     parallax('.parallax_close', 4, 1)
     parallax('.parallax_normal', 5, 1)
     parallax('.parallax_far', 30, 1)
-    parallax('.parallax_poster', 120, 1.3)
+    parallax('.parallax_poster', 120, 1.2)
  });
 
 $(document).ready(function() {
@@ -153,7 +150,7 @@ $(document).ready(function() {
     parallaxStart('.parallax_close', 4, 1)
     parallaxStart('.parallax_normal', 5, 1)
     parallaxStart('.parallax_far', 30, 1)
-    parallaxStart('.parallax_poster', 120, 1.3)
+    parallaxStart('.parallax_poster', 120, 1.2)
 })
 
 $('.top_bouble').click(() => {
@@ -170,8 +167,3 @@ window.onload = () => {
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
-
-// setTimeout(function () {
-//     scrollbar.scrollTop = $(document).scrollTop()
-//     console.log(scrollbar.scrollTop + ' ' + $(document).scrollTop())
-// }, 1000)

@@ -1,6 +1,43 @@
+.block_header
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    margin-bottom: $margin_between_boxes
+    img
+        width: 100%
+        margin: 0
+
+.block_header_title
+    height: 35vw
+    margin: 0
+    .title
+        backdrop-filter: blur(10px)
+        padding: 2rem
+        box-shadow: 0 0 50px rgba($black, .5)
+
+.title
+    display: inline-block
+    color: $white
+    font-size: 12.8rem
+    @include breakpoint($d_laptop)
+        font-size: 7.2rem
+    width: auto
+    text-align: center
+    text-shadow: 0 0 50px rgba($black, .7)
+
+.absolute
+    position: absolute
+    
 .block, .card
     box-sizing: border-box
-    background-color: $white
+    @include dark()
+        background-color: $darken_gray
+    @include light()
+        background-color: $white
+    @include none()
+        background-color: $white
     position: relative
     display: flex
     flex-direction: column
@@ -17,18 +54,13 @@
         transform: scale(1.01)
     &::last-child
         margin-bottom: 0
-    .block_header
-        max-height: 30vh
-        overflow: hidden
-        display: flex
-        align-items: center
-        img
-            width: 100%
-            margin: 0
     h2
         font-size: 2.4rem
         text-align: center
         margin: 2rem 0 0 0
+    .block_header
+        max-height: 30vh
+        margin: 0
         
 .content, .block
     position: relative
@@ -38,6 +70,9 @@
         margin: 2rem 5rem 0 5rem
         padding: 0
         font-size: 1.8rem
+        box-sizing: border-box
+        @include breakpoint($d-phone)
+            margin: .5rem 2rem 0 2rem
     ul
         list-style: square
     li
@@ -86,12 +121,19 @@
 .button
     cursor: pointer
     padding: 1rem 3rem
-    background-color: $darken_gray
+    @include dark()
+        background-color: $lighten_gray
+        color: $white
+    @include light()
+        background-color: $darken_gray
+        color: $white
+    @include none()
+        background-color: $darken_gray
+        color: $white
     border: none
     border-radius: 0
     font-size: 1.8rem
     font-weight: 600
-    color: white
     box-shadow: 0 0 20px rgba($black, 0)
     transition: background-color .5s, box-shadow .5s
     &:hover, &:focus, &:active
@@ -112,15 +154,19 @@
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: space-around
 .card
     max-width: 400px 
     display: block
+    &:hover
+        .block_header
+            transform: scale(1.05)
     .block_header
         max-height: 100vh
         overflow: hidden
         display: flex
         align-items: center
+        transition: transform 3s
         img
             width: 100%
             height: 100%
@@ -131,21 +177,20 @@
         font-weight: bold
     ul
         padding-left: 1.8rem
+        overflow: hidden
     li
         font-size: 1.4rem
         font-weight: 500
-.blue
-    background: linear-gradient($white 50%, rgba($blue, .25))
-.green
-    background: linear-gradient($white 50%, rgba($green, .25))
-.orange
-    background: linear-gradient($white 50%, rgba($orange, .25))
-.yellow
-    background: linear-gradient($white 50%, rgba($yellow, .25))
-.magenta
-    background: linear-gradient($white 50%, rgba($magenta, .25))
-.purple
-    background: linear-gradient($white 50%, rgba($purple, .25))
+    a
+        color: $blue
+        &:hover
+            color: $orange
+            
+
+.money, .button_buy
+    display: flex
+    flex-direction: column
+
 .buy
     margin: 2rem 5rem 0 5rem
     display: flex
@@ -154,4 +199,44 @@
     font-size: 3.6rem
     font-weight: 600
     color: $blue
+.old_price
+    font-size: 2.4rem
+    text-decoration: line-through
+
+.blue
+    background: linear-gradient(rgba($white, 0) 50%, rgba($blue, .25))
+    .price
+        color: $blue
+    .old_price
+        color: rgba($blue, .5)
+.green
+    background: linear-gradient(rgba($white, 0) 50%, rgba($green, .25))
+    .price
+        color: $green
+    .old_price
+        color: rgba($green, .5)
+.orange
+    background: linear-gradient(rgba($white, 0) 50%, rgba($orange, .25))
+    .price
+        color: $orange
+    .old_price
+        color: rgba($orange, .5)
+.yellow
+    background: linear-gradient(rgba($white, 0) 50%, rgba($yellow, .25))
+    .price
+        color: $yellow
+    .old_price
+        color: rgba($yellow, .5)
+.magenta
+    background: linear-gradient(rgba($white, 0) 50%, rgba($magenta, .25))
+    .price
+        color: $magenta
+    .old_price
+        color: rgba($magenta, .5)
+.purple
+    background: linear-gradient(rgba($white, 0) 50%, rgba($purple, .25))
+    .price
+        color: $purple
+    .old_price
+        color: rgba($purple, .5)
     

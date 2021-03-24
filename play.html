@@ -7,29 +7,30 @@
     <script src="libs/smooth-scrollbar.js"></script>
     <script src="libs/circle-progress.min.js"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta content="width=1180" name="viewport" id="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>UltimaCraft</title>
   </head>
   <body id="smooth-scroll">
-    <header>
-      <div id="logotype">
-        <p class="parallax_close" id="serious">Serious</p>
-        <p class="parallax_normal" id="company">Company</p>
-      </div>
-      <div id="header_slider_box">
-        <ul id="header_slider"> 
-          <li class="img_box"><img class="parallax_far" src="images/header_slider/main_bg1.jpg" alt=""></li>
-        </ul>
-      </div>
-    </header>
-    <button class="top_bouble">↑</button>
+    <button class="top_bouble">⯅</button><a class="burger fixed">
+      <div class="line"></div></a>
     <menu class="menu_bar">
       <ul class="menu">
-        <li class="menu_button"><a class="menu_link" href="index.html">Главная</a></li>
-        <li class="menu_button active_page"><a class="menu_link" href="play.html">Играть</a></li>
+        <li class="menu_button">
+          <ul class="sub_menu"><a class="menu_link listed" href="index.html">Сервера</a>
+            <li><a class="menu_link" href="anarchy.html">Анархия</a></li>
+            <li><a class="menu_link" href="index.html">Приватный</a></li>
+          </ul>
+        </li>
+        <li class="menu_button"><a class="menu_link" href="news.html">Новости</a></li>
         <li class="menu_button"><a class="menu_link" href="donate.html">Донат</a></li>
-        <li class="menu_button"><a class="menu_link" href="info.html">Инфо</a></li>
+        <li class="menu_button">
+          <ul class="sub_menu"><a class="menu_link listed" href="info.html">Инфо</a>
+            <li><a class="menu_link" href="info.html#rules">Правила</a></li>
+            <li><a class="menu_link" href="info.html#commands">Команды</a></li>
+            <li><a class="menu_link" href="info.html#mehcanics">Механики</a></li>
+          </ul>
+        </li>
       </ul>
     </menu>
     <div id="bg"> 
@@ -85,5 +86,6 @@
     <script src="js/online_circles.js"></script>
     <script src="js/toggle_block.js"></script>
     <script src="js/server.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

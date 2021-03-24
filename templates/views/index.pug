@@ -4,71 +4,14 @@ include ../views/modules/objects/server.pug
 include ../views/modules/objects/menu.pug
 
 block main
-    +menu("active_page", "", "", "")
+    //-include ../views/modules/header.pug
+    +menu("active_page", "", "", "", "")
     #bg 
         #page
             h1.right Сервера
             +server("https://via.placeholder.com/64", "Experimental", "1.16.5", "seriouscompany.ru:25565", "онлайн", "online", "23/100", "server1")
             +server("https://via.placeholder.com/64", "Modded", "1.12.2", "moddedserver:25565", "оффлайн", "offline", "0/20","server2")
             +server("https://via.placeholder.com/64", "Test", "1.16.5", "testserver:25565", "по приглошению", "only_registered", "2/20", "server3")
-            h1.left Новости
-            .block#post1
-                .block_header
-                    img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                h2 Title
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
-                hr
-                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                a(href="#", alt="").show ↓ БОЛЬШЕ ↓
-                .content
-                    img(src="images/header_slider/main_bg5.jpg", alt="")
-                    p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nravt7tOcFU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    ul Lorem ipsum: 
-                        li <i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.
-                        li <u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.
-                        li <a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.
-                        li Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.
-                a(href="#", alt="").hide ↑ МЕНЬШЕ ↑
-                .publication
-                    time(datetime="2021-03-23 10:37") 23.03.2021 10:37
-                    span published by _GrandMagus_
-            .block#post2
-                .block_header
-                    img.parallax_poster(src="images/header_slider/main_bg2.jpg", alt="")
-                h2 Title
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
-                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                a(href="#", alt="").show ↓ БОЛЬШЕ ↓
-                .content
-                    img(src="images/header_slider/main_bg1.jpg", alt="")
-                    p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                    ul Lorem ipsum: 
-                        li <i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.
-                        li <u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.
-                        li <a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.
-                        li Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.
-                a(href="#", alt="").hide ↑ МЕНЬШЕ ↑
-                .publication
-                    time(datetime="2021-03-23 10:37") 23.03.2021 10:37
-                    span published by _GrandMagus_
-            .block#post3
-                h2 Title
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
-                p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                a(href="#", alt="").show ↓ БОЛЬШЕ ↓
-                .content
-                    img(src="images/header_slider/main_bg5.jpg", alt="")
-                    p In fermentum ligula ac ipsum ullamcorper, a porta augue elementum. Donec efficitur sollicitudin diam bibendum ultrices. Integer fermentum finibus nibh ut maximus. Aenean aliquet velit id diam fringilla faucibus. Vestibulum ut scelerisque tellus. Mauris pulvinar imperdiet quam, sit amet tincidunt ligula. Proin ultricies suscipit interdum. Vestibulum ultrices magna vel massa laoreet, eu scelerisque dui porttitor. Donec urna dui, consequat quis condimentum at, finibus sit amet dolor. 
-                    ul Lorem ipsum: 
-                        li <i>Pellentesque tempor at eros et iaculis</i>. Sed id molestie lacus. Donec a mattis mauris. Fusce eget risus quis leo ultrices faucibus. Proin at ligula sapien. Vivamus efficitur nunc id ipsum pretium, id ornare dui elementum. Quisque lobortis sollicitudin nibh, faucibus congue nisi scelerisque non. Donec eu orci lacinia, laoreet justo nec, sollicitudin massa. Nullam egestas mi lectus, vitae malesuada felis efficitur in. Suspendisse massa ligula, vulputate ac dictum id, mattis et velit. Nulla facilisi. Nunc dapibus ultrices risus, auctor pharetra eros maximus eleifend. Praesent et turpis ut tellus placerat auctor.
-                        li <u>Morbi at velit eu massa finibus posuere a eget enim</u>. Nulla et nibh quis nulla varius ultricies. Pellentesque sed faucibus nisl. Donec sagittis metus nisi, quis ultrices massa condimentum eu. Integer ipsum turpis, accumsan in volutpat non, vulputate vitae enim. Cras quis pharetra orci, et tempus quam. Duis nisi tellus, porta non mauris nec, pretium efficitur diam. Maecenas non tempus sem. Vestibulum et quam dapibus, egestas sem eu, vulputate ligula. Nam at arcu a turpis tempor rutrum. Pellentesque lectus nibh, vulputate id mauris in, tempus tempus ligula. Nulla dolor nisi, finibus non arcu et, vulputate aliquet ex. Morbi consectetur lobortis lacus, vel volutpat est finibus quis. Vivamus tempus pellentesque libero, quis molestie metus varius quis.
-                        li <a href="#">Etiam quis purus nec magna vehicula fringilla eget vel nulla</a>. Integer ac mauris et arcu congue molestie et id nisi. Morbi luctus pellentesque libero, sed finibus justo maximus ut. Aenean lacus odio, consectetur vel ornare eu, posuere ut nibh. Mauris tincidunt purus et nisi consequat commodo. Proin eu interdum justo. Nam semper sem in odio pharetra, non blandit diam placerat. Phasellus iaculis porta leo sed pulvinar. Sed fringilla purus sit amet tellus imperdiet commodo. Praesent quis enim molestie, egestas mi non, feugiat diam.
-                        li Nulla id augue vel mi ornare lacinia eget vel turpis. Pellentesque a turpis at lorem dapibus pharetra. Fusce lobortis justo nec luctus pulvinar. Curabitur finibus lacus in tempus semper. Duis dignissim enim quis enim placerat, at imperdiet dui lacinia. Sed ut bibendum nunc. Ut vitae varius risus, et iaculis est. Duis tristique pulvinar luctus. Nulla ac purus vitae risus malesuada semper. Etiam ut sem eros. Fusce risus nisi, suscipit vestibulum hendrerit et, faucibus ut risus. Sed a justo massa. Maecenas elementum a odio a malesuada. Vivamus posuere cursus pretium. Sed tortor eros, pellentesque id pulvinar mollis, elementum quis diam.
-                a(href="#", alt="").hide ↑ МЕНЬШЕ ↑
-                .publication
-                    time(datetime="2021-03-23 10:37") 23.03.2021 10:37
-                    span published by _GrandMagus_
 block scripts
     script(src="js/main.js")
     script(src="js/slides.js")
@@ -76,3 +19,4 @@ block scripts
     script(src="js/online_circles.js")
     script(src="js/toggle_block.js")
     script(src="js/server.js")
+    script(src="js/menu.js")

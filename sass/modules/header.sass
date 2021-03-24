@@ -1,30 +1,54 @@
 header
-    height: calc(600px + 20vh)
-    width: 100%
+    height: 100vh
+    width: 100vw
     background-color: $dark_gray
     //background-image: url(../images/header_slider/main_bg1.jpg)
     background-size: cover
     display: flex
     justify-content: center
     align-items: center
+    overflow: hidden
 
 #logotype
     margin-top: 5%
     width: $page_width - 100px
     z-index: 1
+    @include breakpoint($d-phone)
+        width: 100vw
     p
         margin: 0
-        font-size: 14.4rem
-        line-height: 12.8rem
+        font-size: 18.8rem
+        line-height: 15.6rem
+        @include breakpoint($d-pc)
+            font-size: 14.4rem
+            line-height: 12.8rem        
         font-weight: bold
         color: white
         display: block
         text-shadow: 0 0 100px rgba($black, 1)
+        @include breakpoint($d-phone)
+            font-size: 9rem
 
 #serious, #company
     transition: transform 50ms
+    z-index: 1
 #company
     text-align: right
+    &::after
+       content: 'C'
+       position: absolute
+       right: -20%
+       font-size: 800%
+       z-index: -1
+       opacity: .02
+#serious
+    &::before
+       content: 'S'
+       position: absolute
+       left: -20%
+       font-size: 800%
+       z-index: -1
+       opacity: .02
 
 #header_slider_box
     position: absolute

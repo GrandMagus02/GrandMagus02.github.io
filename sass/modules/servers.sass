@@ -7,6 +7,9 @@
     box-shadow: 0 0 20px rgba($black, .1)
     transform: scale(1)
     transition: transform .5s, box-shadow .5s
+    
+    @include breakpoint($d-phone)
+        flex-direction: column
     &:hover
         box-shadow: 0 0 20px rgba($black, .25)
         transform: scale(1.01)
@@ -14,9 +17,15 @@
         margin-bottom: 0
     .left_part
         display: flex
+        @include breakpoint($d-phone)
+            flex-direction: row
+            margin: 1rem 0
         img
             width: 10rem
             height: 10rem
+            // @include breakpoint($d-phone)
+            //     width: 0
+            //     height: 0
         .info
             margin-left: 2rem
             display: flex
@@ -30,6 +39,8 @@
             display: flex
             flex-direction: row
             justify-content: space-between
+            @include breakpoint($d-phone)
+                flex-direction: column
             a, p
                 font-weight: bold
                 font-size: 1.8rem
@@ -42,10 +53,14 @@
     .right_part
         display: flex
         align-items: center
+        @include breakpoint($d-phone)
+            flex-direction: column
+            margin: 1rem 0
         
 .status
     display: flex
     align-items: center
+    height: auto
     p
         margin-left: auto 
         text-align: right
@@ -53,21 +68,33 @@
         margin-right: 3rem
         text-transform: uppercase
         font-size: 1.8rem
+    .circle_bar
+        @include breakpoint($d-phone)
+            transform: scale(.5)
+            span
+                transform: scale(2.5)
+                margin-right: -300%
 
 .online
-    background: linear-gradient(0.25turn, $white, rgba($green, .25))
+    background: linear-gradient(0.25turn, rgba($white, 0), rgba($green, .25))
+    @include breakpoint($d-phone)
+        background: linear-gradient(.5turn, rgba($white, 0), rgba($green, .25))
     .status
         p
             color: $green
 
 .offline
-    background: linear-gradient(0.25turn, $white, rgba($orange, .25))
+    background: linear-gradient(0.25turn, rgba($white, 0), rgba($orange, .25))
+    @include breakpoint($d-phone)
+        background: linear-gradient(.5turn, rgba($white, 0), rgba($orange, .25))
     .status
         p
             color: $orange
 
 .only_registered
-    background: linear-gradient(0.25turn, $white, rgba($blue, .25))
+    background: linear-gradient(0.25turn, rgba($white, 0), rgba($blue, .25))
+    @include breakpoint($d-phone)
+        background: linear-gradient(.5turn, rgba($white, 0), rgba($blue, .25))
     .status
         p
             color: $blue

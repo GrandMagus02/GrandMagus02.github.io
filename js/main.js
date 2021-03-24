@@ -1,9 +1,14 @@
 var menuHeight = $('menu').height()
-$('#page').css('padding-top', menuHeight)
+//$('#page').css('padding-top', menuHeight)
 
 $(window).resize(function() {
     menuHeight = $('menu').height()
-    $('#page').css('padding-top', menuHeight)
+    //$('#page').css('padding-top', menuHeight)
+})
+
+var winWidth = $(window).width()
+$(window).resize(function() {
+    winWidth = $(window).width()
 })
 
 $('.content').each(function() {

@@ -1,0 +1,11 @@
+@mixin dark()
+    @media (prefers-color-scheme: dark)
+        @content
+
+@mixin light()
+    @media (prefers-color-scheme: light)
+        @content
+
+@mixin none()
+    @media (prefers-color-scheme: no-preference)
+        @content

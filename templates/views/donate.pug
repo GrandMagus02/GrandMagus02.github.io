@@ -4,104 +4,115 @@ include ../views/modules/objects/server.pug
 include ../views/modules/objects/menu.pug
 
 block main
-    +menu("", "", "active_page", "")
+    +menu("", "", "active_page", "", "")
     #bg 
         #page
             h1.right Донат
             .cards_box
-                .card.blue
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                    .buy 
-                        money.price 50₽
-                        button.button Приобрести
-                .card.green
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                        li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
-                    .buy 
-                        money.price 80₽
-                        button.button Приобрести
-                .card.orange
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                        li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
-                        li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
-                    .buy 
-                        money.price 120₽
-                        button.button Приобрести
-                .card.yellow
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                        li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
-                        li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                    .buy 
-                        money.price 160₽
-                        button.button Приобрести
-                .card.magenta
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                        li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
-                        li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                    .buy 
-                        money.price 230₽
-                        button.button Приобрести
-                .card.purple
-                    .block_header
-                        img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
-                    h2 Title
-                    p Привилегии:
-                    ul(style="list-style: square;")
-                        li Ознакомится с правилами сервера.
-                        li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
-                        li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
-                        li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                        li Дождаться ответа на письмо.
-                        li Зайти на сервер, по присланным в ответе данным.
-                    .buy 
-                        money.price 500₽
-                        button.button Приобрести
+                .cards_column
+                    .card.blue
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                        .buy 
+                            .money
+                                money.price.old_price 50₽
+                                money.price 30₽
+                            .button_buy
+                                button.button Приобрести
+                    .card.yellow
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                            li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                            li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                        .buy 
+                            .money 
+                                money.price.old_price 160₽
+                                money.price 110₽
+                            .button_buy
+                                button.button Приобрести
+                    .card.magenta
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                            li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                            li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                        .buy 
+                            money.price 230₽
+                            button.button Приобрести
+                .cards_column
+                    .card.green
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                            li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                        .buy 
+                            money.price 80₽
+                            button.button Приобрести
+                    .card.orange
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                            li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                            li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                        .buy 
+                            money.price 120₽
+                            button.button Приобрести
+                    .card.purple
+                        .block_header
+                            img.parallax_poster(src="images/header_slider/main_bg3.jpg", alt="")
+                        h2 Title
+                        p Привилегии:
+                        ul(style="list-style: square;")
+                            li Ознакомится с правилами сервера.
+                            li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                            li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                            li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                            li Дождаться ответа на письмо.
+                            li Зайти на сервер, по присланным в ответе данным.
+                        .buy 
+                            .money 
+                                money.price.old_price 550₽
+                                money.price 420₽
+                            .button_buy
+                                button.button Приобрести
             .support 
                 button.button Поддержать Нас
 block scripts
@@ -111,3 +122,4 @@ block scripts
     script(src="js/online_circles.js")
     script(src="js/toggle_block.js")
     script(src="js/server.js")
+    script(src="js/menu.js")

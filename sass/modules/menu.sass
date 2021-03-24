@@ -1,11 +1,15 @@
 .menu_bar
     margin: 0
-    margin-top: -1px
     padding: 0
     box-sizing: border-box
-    width: 100%
-    //height: $menu_height
-    background-color: $darken_gray
+    width: 100vw
+    @include dark()
+        background-color: rgba($darken_gray, .8)
+    @include light()
+        background-color: rgba($light_gray, .8)
+    @include none()
+        background-color: rgba($darken_gray, .8)
+    backdrop-filter: blur(10px)
     position: absolute
     box-shadow: 0 0 20px 5px rgba($black, .25)
     z-index: $z_menu
@@ -13,33 +17,160 @@
 .menu
     margin: 0 auto 0 auto
     padding: 0
-    width: $page_width
+    max-width: $page_width
     display: flex
     justify-content: space-between
-    flex
     flex-flow: row
     list-style-type: none
+    @include breakpoint($d-phone)
+        width: 100vw
+        flex-flow: column
 
 .menu_button
-    //height: $menu_height
     width: 100%
+    position: relative
 
-.menu_link
-    font-size: 2.4rem
+.menu_link, .sub_menu .menu_link, .sub_menu_mobile .menu_link
+    @include dark()
+        color: $white
+    @include light()
+        color: $darken_gray
+    @include none()
+        color: $white
+    
+    font-size: 2.2rem
+    @include breakpoint($d_phone)
+        font-size: 2.8rem
+    
+    letter-spacing: .1rem
     font-weight: 500
     text-decoration: none
-    color: $white
     display: block
     text-align: center
     vertical-align: middle
-    padding: 1.4rem
+    padding: 1.2rem
+    box-sizing: border-box
     transition: background-color .5s, color .5s, padding .1s, font-size .1s
     &:hover, &:focus, &:active
         outline: none
         color: $white
         background-color: $blue
 
+.sub_menu, .sub_menu_mobile
+    margin: 0
+    padding: 0
+    position: absolute
+    height: inherit
+    width: inherit
+    max-height: 100%
+    overflow: hidden
+    display: flex
+    flex-flow: column
+    list-style-type: none
+    transition: max-height .5s, background-color .5s
+    &:hover, &:focus, &:active
+        max-height: 1024px
+        @include dark()
+            background-color: rgba($darken_gray, 1)
+        @include light()
+            background-color: rgba($light_gray, 1)
+        @include none()
+            background-color: rgba($gray, 1)
+        .listed
+            &::after
+                content: '⯅'
+                font-size: 70%
+                margin: .5rem
+    .menu_link
+        @include dark()
+            background-color: rgba($darken_gray, .8)
+        @include light()
+            background-color: rgba($light_gray, .8)
+        @include none()
+            background-color: rgba($darken_gray, .8)
+    .listed
+        background: rgba($black, 0)
+
+.sub_menu_mobile
+    max-height: auto
+    position: static
+.listed
+    background: rgba($black, 0)
+    &::after
+        content: '⯆'
+        font-size: 70%
+        margin: .5rem
+
 .active_page
     .menu_link
-        background-color: $gray
+        @include dark()
+            background-color: $lighten_gray
+        @include light()
+            background-color: $white
+        @include none()
+            background-color: $lighten_gray
         font-weight: 700
+
+.burger, .active_burger
+    width: 3rem
+    height: 3rem
+    padding: 2rem
+    box-sizing: content-box
+    @include dark()
+        background-color: rgba($darken_gray, .8)
+    @include light()
+        background-color: rgba($light_gray, .8)
+    @include none()
+        background-color: rgba($darken_gray, .8)
+    backdrop-filter: blur(10px)
+    box-shadow: 0 0 20px 5px rgba($black, .25)
+    z-index: $z_menu + 1
+    border: none
+    border-radius: 0
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    transition: background-color .5s
+    &:hover
+        .line
+            background-color: $blue
+            &::before
+                background-color: $blue
+            &::after
+                background-color: $blue
+    .line
+        width: 100%
+        height: .5rem
+        background-color: $white
+        position: relative
+        transition: background-color .5s
+        &::before
+            content: ''
+            height: .5rem
+            width: 100%
+            position: absolute
+            top: -1rem
+            left: 0
+            max-width: 100%
+            background-color: $white
+            transition: background-color .5s, max-width .5s, top .5s
+        &::after
+            content: ''
+            height: .5rem
+            width: 100%
+            position: absolute
+            top: 1rem
+            right: 0
+            max-width: 100%
+            background-color: $white
+            transition: background-color .5s, max-width .5s, top .5s
+.active_burger
+    .line
+        &::before
+            //max-width: 0
+            top: 0
+        &::after
+            //max-width: 0
+            top: 0
