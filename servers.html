@@ -18,7 +18,7 @@
     <menu class="menu_bar">
       <ul class="menu">
         <li class="menu_button"><a class="menu_link" href="index.html">Главная</a></li>
-        <li class="menu_button">
+        <li class="menu_button active_page">
           <ul class="sub_menu"><a class="menu_link listed" href="servers.html">Сервера</a>
             <li><a class="menu_link" href="anarchy.html">Анархия</a></li>
             <li><a class="menu_link" href="servers.html">Приватный</a></li>
@@ -26,7 +26,7 @@
         </li>
         <li class="menu_button"><a class="menu_link" href="news.html">Новости</a></li>
         <li class="menu_button"><a class="menu_link" href="donate.html">Донат</a></li>
-        <li class="menu_button active_page">
+        <li class="menu_button">
           <ul class="sub_menu"><a class="menu_link listed" href="info.html">Инфо</a>
             <li><a class="menu_link" href="info.html#play">Играть</a></li>
             <li><a class="menu_link" href="info.html#rules">Правила</a></li>
@@ -38,16 +38,54 @@
     </menu>
     <div id="bg"> 
       <div id="page">
-        <h1 class="right">Начать играть</h1>
-        <div class="block">
-          <ul style="list-style: decimal;">
-            <li>Ознакомится с правилами сервера.</li>
-            <li>Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.</li>
-            <li>Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.</li>
-            <li>Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.</li>
-            <li>Дождаться ответа на письмо.</li>
-            <li>Зайти на сервер, по присланным в ответе данным.</li>
-          </ul>
+        <h1 class="right">Сервера</h1>
+        <div class="server_box online">
+          <div class="left_part"><img src="https://via.placeholder.com/64" alt=""/>
+            <div class="info">
+              <h2>Experimental</h2>
+              <div class="ip"><a>1.16.5</a>
+                <p>IP: <a class="ip_adress">seriouscompany.ru:25565</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="right_part"> 
+            <div class="status"> 
+              <p>онлайн</p>
+              <div class="circle_bar" id="server1"><span>23/100</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="server_box offline">
+          <div class="left_part"><img src="https://via.placeholder.com/64" alt=""/>
+            <div class="info">
+              <h2>Modded</h2>
+              <div class="ip"><a>1.12.2</a>
+                <p>IP: <a class="ip_adress">moddedserver:25565</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="right_part"> 
+            <div class="status"> 
+              <p>оффлайн</p>
+              <div class="circle_bar" id="server2"><span>0/20</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="server_box only_registered">
+          <div class="left_part"><img src="https://via.placeholder.com/64" alt=""/>
+            <div class="info">
+              <h2>Test</h2>
+              <div class="ip"><a>1.16.5</a>
+                <p>IP: <a class="ip_adress">testserver:25565</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="right_part"> 
+            <div class="status"> 
+              <p>по приглошению</p>
+              <div class="circle_bar" id="server3"><span>2/20</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

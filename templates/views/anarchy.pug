@@ -4,10 +4,10 @@ include ../views/modules/objects/server.pug
 include ../views/modules/objects/menu.pug
 
 block main
-    +menu("active_page", "", "", "", "")
+    +menu("", "active_page", "", "", "")
     #bg
         .block_header.block_header_title
-            img.parallax_poster(src="images/anarchy/1_image.jpg", alt="")
+            img.parallax_poster(src="images/anarchy/7_image.jpg", alt="")
             h1.title.absolute Анархия
         #page
             .block
@@ -51,8 +51,9 @@ block main
 block scripts
     script(src="js/main.js")
     script(src="js/slides.js")
-    script(src="js/scroll-bar.js")
+    script(src="js/scroll_bar.js")
     script(src="js/online_circles.js")
     script(src="js/toggle_block.js")
     script(src="js/server.js")
     script(src="js/menu.js")
+    script(src="js/loading_page.js")

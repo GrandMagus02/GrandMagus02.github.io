@@ -1,0 +1,23 @@
+extends ../layouts/layout.pug
+
+include ../views/modules/objects/server.pug
+include ../views/modules/objects/menu.pug
+
+block main
+    //-include ../views/modules/header.pug
+    +menu("", "active_page", "", "", "")
+    #bg 
+        #page
+            h1.right Сервера
+            +server("https://via.placeholder.com/64", "Experimental", "1.16.5", "seriouscompany.ru:25565", "онлайн", "online", "23/100", "server1")
+            +server("https://via.placeholder.com/64", "Modded", "1.12.2", "moddedserver:25565", "оффлайн", "offline", "0/20","server2")
+            +server("https://via.placeholder.com/64", "Test", "1.16.5", "testserver:25565", "по приглошению", "only_registered", "2/20", "server3")
+block scripts
+    script(src="js/main.js")
+    script(src="js/slides.js")
+    script(src="js/scroll_bar.js")
+    script(src="js/online_circles.js")
+    script(src="js/toggle_block.js")
+    script(src="js/server.js")
+    script(src="js/menu.js")
+    script(src="js/loading_page.js")

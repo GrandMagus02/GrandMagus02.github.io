@@ -12,20 +12,23 @@
     <title>UltimaCraft</title>
   </head>
   <body id="smooth-scroll">
-    <button class="top_bouble">⯅</button><a class="burger fixed">
+    <button class="top_bouble">⯅</button>
+    <div class="fixed" id="loading_screen"></div><a class="burger fixed">
       <div class="line"></div></a>
     <menu class="menu_bar">
       <ul class="menu">
+        <li class="menu_button"><a class="menu_link" href="index.html">Главная</a></li>
         <li class="menu_button">
-          <ul class="sub_menu"><a class="menu_link listed" href="index.html">Сервера</a>
+          <ul class="sub_menu"><a class="menu_link listed" href="servers.html">Сервера</a>
             <li><a class="menu_link" href="anarchy.html">Анархия</a></li>
-            <li><a class="menu_link" href="index.html">Приватный</a></li>
+            <li><a class="menu_link" href="servers.html">Приватный</a></li>
           </ul>
         </li>
         <li class="menu_button"><a class="menu_link" href="news.html">Новости</a></li>
-        <li class="menu_button"><a class="menu_link" href="donate.html">Донат</a></li>
+        <li class="menu_button active_page"><a class="menu_link" href="donate.html">Донат</a></li>
         <li class="menu_button">
           <ul class="sub_menu"><a class="menu_link listed" href="info.html">Инфо</a>
+            <li><a class="menu_link" href="info.html#play">Играть</a></li>
             <li><a class="menu_link" href="info.html#rules">Правила</a></li>
             <li><a class="menu_link" href="info.html#commands">Команды</a></li>
             <li><a class="menu_link" href="info.html#mehcanics">Механики</a></li>
@@ -33,6 +36,7 @@
         </li>
       </ul>
     </menu>
+    <div id="item_stats"></div>
     <div id="bg"> 
       <div id="page">
         <h1 class="right">Донат</h1>
@@ -45,7 +49,10 @@
               <ul style="list-style: square;">
                 <li>Ознакомится с правилами сервера.</li>
                 <li>Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.</li>
-              </ul>
+              </ul><a class="show" href="#" alt="">↓ КИТ НАБОР ↓</a>
+              <div class="content">
+                <div class="kits"><img class="kit_item" src="images/cit/iron_sword_lt.png" alt="" data-name="Sword" data-description="Epic sword!!!" data-enchantments="Sharpness VII; Fire Aspect IV" data-damage="13" data-durability="1,562"><img class="kit_item" src="images/cit/mending.png" alt="" data-name="Book" data-description="Epic book!!!" data-enchantments="Mending"></div>
+              </div><a class="hide" href="#" alt="">↑ СВЕРНУТЬ ↑</a>
               <div class="buy"> 
                 <div class="money">
                   <money class="price old_price">50₽</money>
@@ -69,7 +76,10 @@
                 <li>Зайти на сервер, по присланным в ответе данным.</li>
                 <li>Дождаться ответа на письмо.</li>
                 <li>Зайти на сервер, по присланным в ответе данным.</li>
-              </ul>
+              </ul><a class="show">↓ КИТ НАБОР ↓</a>
+              <div class="content">
+                <div class="kits"><img class="kit_item" src="images/cit/diamond_chestplate_fp.png" alt="" data-name="Diamond Chestplate" data-description="Epic sword!!!" data-enchantments="Protection V" data-durability="1,562"><img class="kit_item" src="images/cit/crossbow_leaping.png" alt="" data-name="Book" data-description="Crossbow of a legendary God./n It gives power to a person holding it!!!"><img class="kit_item" src="images/cit/iron_sword_lt.png" alt="" data-name="Sword" data-description="Epic sword!!!" data-enchantments="Sharpness VII; Fire Aspect IV" data-damage="13" data-durability="1,562"><img class="kit_item" src="images/cit/mending.png" alt="" data-name="Book" data-description="Epic book!!!" data-enchantments="Mending"></div>
+              </div><a class="hide">↑ СВЕРНУТЬ ↑</a>
               <div class="buy"> 
                 <div class="money"> 
                   <money class="price old_price">160₽</money>
@@ -169,42 +179,62 @@
     </div>
     <footer>
       <div id="navigation">
-        <ul class="navList">
-          <li class="navItem">
+        <ul> 
+          <li> 
             <h1>Главная</h1>
           </li>
-          <li class="navItem"><a href="#servers">Сервера</a></li>
-          <li class="navItem"><a href="news">Новости</a></li>
-        </ul>
-        <ul class="navList">
-          <li class="navItem">
-            <h1>Играть</h1>
+          <li> <a href="index.html">Главная</a>
+            <ul> 
+              <li> </li><a href="index.html#about">О нас</a>
+            </ul>
           </li>
-          <li class="navItem"><a href="#" target="_blank">Лаунчер Mojang</a></li>
-          <li class="navItem"><a href="#">Наш Лаунчер</a></li>
         </ul>
-        <ul class="navList">
-          <li class="navItem">
+        <ul> 
+          <li> 
+            <h1>Сервера</h1>
+          </li>
+          <li> <a href="servers.html">Сервера</a>
+            <ul> 
+              <li><a href="anarchy.html">Анархия</a></li>
+              <li><a href="servers.html">Приватный</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul> 
+          <li> 
+            <h1>Новости</h1>
+          </li>
+          <li> <a href="news.html">Новости</a></li>
+        </ul>
+        <ul> 
+          <li> 
             <h1>Донат</h1>
           </li>
-          <li class="navItem"><a href="#">Задонатить</a></li>
+          <li> <a href="#">Задонатить</a></li>
         </ul>
-        <ul class="navList">
-          <li class="navItem">
+        <ul>
+          <li> 
             <h1>Инфо</h1>
           </li>
-          <li class="navItem"><a href="#">Правила</a></li>
-          <li class="navItem"><a href="#">Команды</a></li>
-          <li class="navItem"><a href="#">Механики</a></li>
+          <li> <a href="info.html#play">Играть</a>
+            <ul> 
+              <li> <a href="#" target="_blank">Наш Лаунчер</a></li>
+            </ul>
+          </li>
+          <li> <a href="info.html#rules">Правила</a></li>
+          <li> <a href="info.html#commands">Команды</a></li>
+          <li> <a href="info.html#mehcanics">Механики</a></li>
         </ul>
       </div><span id="copyright">© 2016-2021 SeriousCompany. All Rights Reserved.</span>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/slides.js"></script>
-    <script src="js/scroll-bar.js"></script>
+    <script src="js/scroll_bar.js"></script>
     <script src="js/online_circles.js"></script>
     <script src="js/toggle_block.js"></script>
     <script src="js/server.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/kit_item.js"></script>
+    <script src="js/loading_page.js"></script>
   </body>
 </html>

@@ -1,10 +1,4 @@
 $(document).ready(function(){
-
-    // $('.show').each(function() {
-    //     let parentId = $( this ).parent().attr('id')
-    //     $( this ).attr('href', '#' + parentId)
-    // })
-
     $('.show').click(function(){
         $( this ).toggle()
         $( this ).siblings('.hide').toggle()

@@ -2,6 +2,7 @@ footer
     display: flex
     justify-content: center
     flex-direction: column
+    flex-wrap: wrap
     @include dark()
         background-color: $darken_gray
         color: $lighten_gray
@@ -12,11 +13,17 @@ footer
         background-color: $darken_gray
         color: $lighten_gray
     box-shadow: 0 0 20px 5px rgba($black, .25)
-    padding: 6vh 0
+    padding: 6vh 20vw
     ul
         padding: 0
-        margin: 0
+        min-width: 15rem
         list-style-type: none
+    li
+        @include breakpoint($d-phone)
+            display: flex
+            justify-content: center
+        ul
+            padding-left: 3rem
     a
         color: $blue
         font-size: 1.8rem
@@ -24,7 +31,7 @@ footer
         text-decoration: none
         line-height: 3rem
         transition: color .5s
-        &:hover
+        &:hover, &:focus
             color: $white
 #copyright
     font-size: 1.8rem
@@ -35,11 +42,11 @@ footer
         font-size: 1.4rem
 
 #navigation
+    flex-wrap: wrap
     display: flex
-    width: $page_width
+    width: 100%
     margin: 0 auto
     box-sizing: border-box
-    padding: 0 5vw
     align-content: center
     justify-content: space-between
     flex-direction: row

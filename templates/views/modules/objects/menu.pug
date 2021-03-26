@@ -4,21 +4,23 @@ mixin menu(a, b, c, d, e)
     menu.menu_bar
         ul.menu
             li.menu_button(class=a)
+                a.menu_link(href="index.html") Главная
+            li.menu_button(class=b)
                 ul.sub_menu
-                    a.menu_link.listed(href="index.html") Сервера
+                    a.menu_link.listed(href="servers.html") Сервера
                     li
                         a.menu_link(href="anarchy.html") Анархия
                     li
-                        a.menu_link(href="index.html") Приватный
-            li.menu_button(class=b)
+                        a.menu_link(href="servers.html") Приватный
+            li.menu_button(class=c)
                 a.menu_link(href="news.html") Новости
-            //- li.menu_button(class=c)
-            //-     a.menu_link(href="play.html") Играть
             li.menu_button(class=d)
                 a.menu_link(href="donate.html") Донат
             li.menu_button(class=e)
                 ul.sub_menu
                     a.menu_link.listed(href="info.html") Инфо
+                    li
+                        a.menu_link(href="info.html#play") Играть
                     li
                         a.menu_link(href="info.html#rules") Правила
                     li

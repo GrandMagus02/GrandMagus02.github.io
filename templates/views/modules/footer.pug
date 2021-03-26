@@ -1,31 +1,45 @@
 footer
     #navigation
-        ul.navList
-            li.navItem
+        ul 
+            li 
                 h1 Главная
-            li.navItem
-                a(href="#servers") Сервера
-            li.navItem
-                a(href="news") Новости
-        ul.navList
-            li.navItem
-                h1 Играть
-            li.navItem
-                a(href="#" target="_blank") Лаунчер Mojang
-            li.navItem
-                a(href="#") Наш Лаунчер
-        ul.navList
-            li.navItem
+            li 
+                a(href="index.html") Главная
+                ul 
+                    li 
+                    a(href="index.html#about") О нас
+        ul 
+            li 
+                h1 Сервера
+            li 
+                a(href="servers.html") Сервера
+                ul 
+                    li
+                        a(href="anarchy.html") Анархия
+                    li
+                        a(href="servers.html") Приватный
+        ul 
+            li 
+                h1 Новости
+            li 
+                a(href="news.html") Новости
+        ul 
+            li 
                 h1 Донат
-            li.navItem
+            li 
                 a(href="#") Задонатить
-        ul.navList
-            li.navItem
+        ul
+            li 
                 h1 Инфо
-            li.navItem
-                a(href="#") Правила
-            li.navItem
-                a(href="#") Команды
-            li.navItem
-                a(href="#") Механики
+            li 
+                a(href="info.html#play") Играть
+                ul 
+                    li 
+                        a(href="#" target="_blank") Наш Лаунчер
+            li 
+                a(href="info.html#rules") Правила
+            li 
+                a(href="info.html#commands") Команды
+            li 
+                a(href="info.html#mehcanics") Механики
     span#copyright © 2016-2021 SeriousCompany. All Rights Reserved.

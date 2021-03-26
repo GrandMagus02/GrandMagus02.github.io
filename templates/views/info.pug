@@ -16,7 +16,16 @@ block main
             //-             a(href="#commands") Команды
             //-         li
             //-             a(href="#mehcanics") Механики
-            h1.right#rules Правила
+            h1.right#play Начать играть
+            .block
+                ul(style="list-style: decimal;")
+                    li Ознакомится с правилами сервера.
+                    li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                    li Установить лаунчер <a href="https://www.minecraft.net/ru-ru/download/">Minecraft</a> или воспользоватся <a href="#">нашим</a> лаунчером.
+                    li Запросить доступ на сервер, написав письмо на почту <a class="email">vadik.golubeff@yandex.ru</a>.
+                    li Дождаться ответа на письмо.
+                    li Зайти на сервер, по присланным в ответе данным.
+            h1.left#rules Правила
             .block
                 h2 1. Общее
                 ul(style="list-style: none;")
@@ -39,7 +48,7 @@ block main
                     li 3.3.  Запрещено материться - отключение чата на 30 минут.
                     li 3.4.  Запрещено оскорбление в общий чат - отключение чата на 30 минут.
                     li 3.5.  Запрещено попрошайничество - отключение чата на 5 минут.
-            h1.left#commands Команды
+            h1.right#commands Команды
             .block
                 h2 Общее
                 p /help &ltстраница&gt - вывод доступных комманд
@@ -142,7 +151,7 @@ block main
                     p /testcommand &ltsmth&gt - тестовая комманда
                     p /testcommand &ltsmth&gt - тестовая комманда
                 a(href="#", alt="").hide ↑ МЕНЬШЕ ↑
-            h1.right#mehcanics Механики
+            h1.left#mehcanics Механики
             .block
                 h2 Система зачарований
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Praesent orci tortor</b>, lacinia nec tristique in, laoreet vitae nunc. 
@@ -189,8 +198,9 @@ block main
 block scripts
     script(src="js/main.js")
     script(src="js/slides.js")
-    script(src="js/scroll-bar.js")
+    script(src="js/scroll_bar.js")
     script(src="js/online_circles.js")
     script(src="js/toggle_block.js")
     script(src="js/server.js")
     script(src="js/menu.js")
+    script(src="js/loading_page.js")

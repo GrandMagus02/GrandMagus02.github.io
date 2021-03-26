@@ -22,14 +22,21 @@
     @include breakpoint($d_phone)
         width: 100vw
         padding: 3vh 5vw
+    h1
+        @include dark()
+            color: $white
+        @include light()
+            color: $white
+        @include none()
+            color: $white
     .right, .left
         font-size: 3.6rem
-        background: linear-gradient(0.25turn, rgba($blue, .25), rgba($white, 0))
+        background: linear-gradient(0.25turn, rgba($blue, .5), rgba($white, 0))
         padding: .5rem 2rem
         font-weight: bold
         margin: $margin_between_boxes 0
         @include breakpoint($d_phone)
-            padding: 0
+            padding: 0 1rem
     .right
         text-align: right
-        background: linear-gradient(0.25turn, rgba($white, 0), rgba($blue, .25))
+        background: linear-gradient(0.25turn, rgba($white, 0), rgba($blue, .5))

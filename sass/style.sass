@@ -50,6 +50,7 @@ body
   margin: 0 !important
 
 a
+  cursor: pointer
   transition: color .5s
   &:hover, &:focus, &:active
     outline: none
@@ -61,6 +62,12 @@ a
 
 .parallax_far, .parallax_poster, .parallax_normal, .parallax_close
   will-change: transform
+
+#loading_screen
+  width: 100vw
+  height: 100vh
+  background-color: $dark_gray
+  z-index: 100
 
 @import modules/header.sass
 @import modules/menu.sass

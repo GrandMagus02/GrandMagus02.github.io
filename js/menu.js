@@ -8,28 +8,6 @@ function menu() {
     var $burger = $( '.burger' )
     var $subMenu = $('.sub_menu')
     var fadeTime = 300
-    
-    // $listButton.on( 'mouseenter', () => {
-    //     $listButton.siblings( $subMenu ).fadeIn(fadeTime)
-
-    //     $listButton.siblings( $subMenu ).on( 'mouseenter', () => {
-    //         $listButton.siblings( $subMenu ).fadeIn(fadeTime)
-    //     })
-    // })
-
-    // $listButton.on( 'mouseenter', () => {
-    //     $listButton.siblings( $subMenu ).fadeIn(fadeTime)
-
-    //     $listButton.siblings( $subMenu ).on( 'mouseenter', () => {
-    //         $listButton.siblings( $subMenu ).fadeIn(fadeTime)
-    //     })
-    // })
-
-    // $listButton.on( 'mouseleave', () => {
-    //     $listButton.siblings( $subMenu ).on( 'mouseleave', () => {
-    //         $listButton.siblings( $subMenu ).fadeOut(fadeTime)
-    //     })
-    // })
 
     console.log('mobile')
     $burger.on( 'click', () => {
@@ -40,14 +18,6 @@ function menu() {
             $( '.menu_bar' ).fadeToggle(fadeTime)
         }
     })
-
-    // $('.menu_bar').on( 'mouseleave', () => {
-    //     if (winWidth <= mobileWidth) {
-    //         $burger.toggleClass('burger')
-    //         $burger.toggleClass('active_burger')
-    //         $( '.menu_bar' ).fadeToggle(fadeTime)
-    //     }
-    // })
 }
 
 function menuType() {

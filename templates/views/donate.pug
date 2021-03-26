@@ -4,7 +4,8 @@ include ../views/modules/objects/server.pug
 include ../views/modules/objects/menu.pug
 
 block main
-    +menu("", "", "active_page", "", "")
+    +menu("", "", "", "active_page", "")
+    #item_stats
     #bg 
         #page
             h1.right Донат
@@ -18,6 +19,12 @@ block main
                         ul(style="list-style: square;")
                             li Ознакомится с правилами сервера.
                             li Скачать и установить <a href="https://java.com/ru/download/">Java</a> на ваш компьютер.
+                        a(href="#", alt="").show ↓ КИТ НАБОР ↓
+                        .content
+                            .kits
+                                img.kit_item(src="images/cit/iron_sword_lt.png", alt="", data-name="Sword", data-description="Epic sword!!!", data-enchantments="Sharpness VII; Fire Aspect IV", data-damage="13", data-durability="1,562")
+                                img.kit_item(src="images/cit/mending.png", alt="", data-name="Book", data-description="Epic book!!!", data-enchantments="Mending")
+                        a(href="#", alt="").hide ↑ СВЕРНУТЬ ↑
                         .buy 
                             .money
                                 money.price.old_price 50₽
@@ -38,6 +45,14 @@ block main
                             li Зайти на сервер, по присланным в ответе данным.
                             li Дождаться ответа на письмо.
                             li Зайти на сервер, по присланным в ответе данным.
+                        a.show ↓ КИТ НАБОР ↓
+                        .content
+                            .kits
+                                img.kit_item(src="images/cit/diamond_chestplate_fp.png", alt="", data-name="Diamond Chestplate", data-description="Epic sword!!!", data-enchantments="Protection V", data-durability="1,562")
+                                img.kit_item(src="images/cit/crossbow_leaping.png", alt="", data-name="Book", data-description="Crossbow of a legendary God./n It gives power to a person holding it!!!")
+                                img.kit_item(src="images/cit/iron_sword_lt.png", alt="", data-name="Sword", data-description="Epic sword!!!", data-enchantments="Sharpness VII; Fire Aspect IV", data-damage="13", data-durability="1,562")
+                                img.kit_item(src="images/cit/mending.png", alt="", data-name="Book", data-description="Epic book!!!", data-enchantments="Mending")
+                        a.hide ↑ СВЕРНУТЬ ↑
                         .buy 
                             .money 
                                 money.price.old_price 160₽
@@ -118,8 +133,10 @@ block main
 block scripts
     script(src="js/main.js")
     script(src="js/slides.js")
-    script(src="js/scroll-bar.js")
+    script(src="js/scroll_bar.js")
     script(src="js/online_circles.js")
     script(src="js/toggle_block.js")
     script(src="js/server.js")
     script(src="js/menu.js")
+    script(src="js/kit_item.js")
+    script(src="js/loading_page.js")
